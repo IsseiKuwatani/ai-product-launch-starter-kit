@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>困ったときのヘルプFAQ | AI Webサービス制作スターターキット</title>
+  <meta name="description" content="Claude Code/Codexの選び方、プロンプト集と/setup skillの違い、Mac/Windows導入で迷いやすい点を整理したヘルプFAQ。" />
+  <style>
+    :root{--navy:#062448;--green:#008f68;--mint:#e5fbf3;--bg:#f8fcfa;--text:#143044;--line:#cfeee4;--yellow:#fff6d8;--blue:#174ea6}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',YuGothic,Meiryo,sans-serif;background:linear-gradient(180deg,#f8fcfa,#eefaf5);color:var(--text);line-height:1.8}.wrap{max-width:980px;margin:auto;padding:28px 18px 72px}.crumb{color:#64748b;font-size:14px;margin-bottom:18px}.crumb a{color:var(--green);font-weight:900}.hero,.panel{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 16px 42px rgba(6,36,72,.07);margin-top:18px}.badge{display:inline-flex;background:var(--mint);color:var(--green);font-weight:1000;border-radius:999px;padding:8px 14px}h1{font-size:clamp(32px,6vw,56px);line-height:1.1;color:var(--navy);letter-spacing:-.04em;margin:16px 0}h2{color:var(--navy);font-size:28px;margin:0 0 12px}h3{color:var(--navy);font-size:20px;margin:22px 0 6px}.lead{font-size:18px}.answer{border-left:5px solid var(--green);background:#fbfffd;border-radius:14px;padding:14px 16px;margin:10px 0}.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{border:1px solid #d8eee6;border-radius:20px;padding:18px;background:#fbfffd}.card strong{display:block;color:var(--navy);font-size:18px}.chip{display:inline-flex;align-items:center;gap:8px;background:var(--mint);border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-weight:900;margin:4px 6px 4px 0}.logo{width:22px;height:22px;object-fit:contain}.callout{background:var(--yellow);border:1px solid #f6dc7a;border-radius:20px;padding:16px;font-weight:900}.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;text-decoration:none;border-radius:14px;padding:12px 16px;font-weight:1000}.btn.secondary{background:#fff;color:var(--green);border:2px solid var(--green)}code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:1px 5px}table{width:100%;border-collapse:collapse;background:#fff}th,td{border-top:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}th{color:var(--navy);background:#fbfffd}.small{font-size:14px;color:#64748b}.route{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}.route .card{background:#fff}.question{background:#fff;border:1px solid #d8eee6;border-radius:18px;padding:16px;margin:12px 0}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="crumb"><a href="../index.html">スターターキットTOP</a> / 困ったときのヘルプFAQ</div>
+    <section class="hero">
+      <span class="badge">？ 迷ったらここを見る</span>
+      <h1>困ったときの<br>ヘルプFAQ</h1>
+      <p class="lead">「Claude CodeとCodexどちらがいい？」「プロンプト集と <code>/setup</code> は何が違う？」「Mac/Windowsはどれを見ればいい？」に答えるページです。</p>
+      <div class="callout">結論：<strong>今契約しているAIで始めてOK</strong>です。Claudeを使っている人はClaude Code、ChatGPT / OpenAIを使っている人はCodexから始めてください。</div>
+      <div class="btns"><a class="btn" href="../index.html#choose">選び方へ戻る</a><a class="btn secondary" href="manuals/setup-skill.html">/setup説明へ</a><a class="btn secondary" href="../prompts/development-prompts.html">プロンプト集へ</a></div>
+    </section>
+
+    <section class="panel">
+      <h2>まず、どれを選べばいい？</h2>
+      <div class="quick">
+        <div class="card"><strong><span class="chip"><img class="logo" src="../assets/logos/apple.svg" alt="Macロゴ">Mac</span> の人</strong><p>Mac版マニュアルを見ます。Claude契約中ならClaude Code Mac、ChatGPT / OpenAI契約中ならCodex Macへ。</p></div>
+        <div class="card"><strong><span class="chip"><img class="logo" src="../assets/logos/windows.svg" alt="Windowsロゴ">Windows</span> の人</strong><p>Windows版マニュアルを見ます。PowerShellなどの言葉が出ても、まずはWindows用ページだけ見ればOKです。</p></div>
+        <div class="card"><strong>AI選びで迷う人</strong><p>新しく契約を増やすより、<strong>今契約しているAIでやる方がいい</strong>です。ツールが違っても、最初のゴールは同じです。</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>プロンプト集と <code>/setup</code> skill の違い</h2>
+      <table>
+        <tr><th>項目</th><th>プロンプト集</th><th><code>/setup</code> skill</th></tr>
+        <tr><td>一言でいうと</td><td>順番にコピーしてAIに貼る「台本」</td><td>Claude Code向けの「初回案内係」</td></tr>
+        <tr><td>使う場所</td><td>Claude Code / Codex などの入力欄</td><td>Claude Codeでテンプレートを開いた後の入力欄</td></tr>
+        <tr><td>向いている人</td><td>中身を見ながら、自分のペースで進めたい人</td><td>最初の1画面MVPまで迷わず進めたい人</td></tr>
+        <tr><td>Codexの場合</td><td>こちらをStep 0から使う</td><td>基本的には使わず、プロンプト集で代替する</td></tr>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>おすすめルート</h2>
+      <div class="route">
+        <div class="card"><strong>Claude Codeルート</strong><p>導入マニュアル → テンプレートを開く → <code>/setup</code> → ブラウザ確認 → 必要に応じてプロンプト集</p></div>
+        <div class="card"><strong>Codexルート</strong><p>導入マニュアル → テンプレートを開く → プロンプト集 Step 0 → ブラウザ確認 → 必要に応じて保存/AI機能</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>FAQ</h2>
+      <div class="question"><h3>Q. Claude CodeとCodexはどちらがいいですか？</h3><div class="answer">A. 原則は <strong>今契約しているAIでやる方がいい</strong> です。Claudeを契約中ならClaude Code、ChatGPT / OpenAIを契約中ならCodex。両方を新しく契約する必要はありません。</div></div>
+      <div class="question"><h3>Q. 最初に見るのはプロンプト集ですか？ <code>/setup</code> ですか？</h3><div class="answer">A. Claude Codeで進めるなら、最初は <code>/setup</code> がおすすめです。Codexで進める、または手順を見ながら自分で調整したい場合はプロンプト集を上から貼ってください。</div></div>
+      <div class="question"><h3>Q. プロンプト集と <code>/setup</code> は両方やる必要がありますか？</h3><div class="answer">A. 必須ではありません。<code>/setup</code> で最初の形を作り、その後の改善でプロンプト集を使う、という順番が分かりやすいです。</div></div>
+      <div class="question"><h3>Q. <code>/setup</code> はCodexでも使えますか？</h3><div class="answer">A. このキットの <code>/setup</code> はClaude Code向けです。Codexでは、プロンプト集のStep 0から順番に貼って進めてください。</div></div>
+      <div class="question"><h3>Q. MacとWindowsのどちらのマニュアルを見ればいいですか？</h3><div class="answer">A. 自分のPCに合わせます。<span class="chip"><img class="logo" src="../assets/logos/apple.svg" alt="Macロゴ">Mac</span>ならMac版、<span class="chip"><img class="logo" src="../assets/logos/windows.svg" alt="Windowsロゴ">Windows</span>ならWindows版です。</div></div>
+      <div class="question"><h3>Q. ターミナルやコマンドが怖いです。</h3><div class="answer">A. コピーして貼るだけの行を使います。意味が不安なときは、AIに「今から実行するコマンドの意味を1行で説明して」と聞いてから実行してください。</div></div>
+      <div class="question"><h3>Q. AI APIキーは最初から必要ですか？</h3><div class="answer">A. 不要です。最初はAI接続なしのモック結果で体験を確認します。「入力する → 結果が出る」流れができてから、必要な場合だけ追加します。</div></div>
+      <div class="question"><h3>Q. どこまでできたら初回セットアップ完了ですか？</h3><div class="answer">A. ブラウザで自分のPC上のページが開き、「入力する → 結果が表示される」まで確認できたら完了です。公開、ログイン、決済は次の段階でOKです。</div></div>
+    </section>
+  </main>
+</body>
+</html>

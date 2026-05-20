@@ -17,10 +17,11 @@
     <section class="hero">
       <span class="badge">Claude Code 対応</span>
       <h1>立ち上げ後は<br><code>/setup</code>で進めればOK</h1>
-      <p class="lead">テンプレート内にセットアップ手順を入れています。Claude Codeでテンプレートを開いて <strong>/setup</strong> を実行すると、質問に答えながら、まずは自分のPCで動く簡単なWebサービスまで進められます。</p>
+      <p class="lead"><strong>/setup はClaude Code向けの初回案内係です。</strong> テンプレート内のファイルを確認し、質問に答えながら、まずは自分のPCで動く簡単なWebサービスまで進められます。Codexを使う人は、代わりに「開発プロンプト集 順番に貼る版」をStep 0から使ってください。</p>
       <div class="cta-row">
         <a class="btn" href="../../skills/setup/">setup skillを見る</a>
         <a class="btn secondary" href="../../template/next-ai-product-starter/">テンプレートを見る</a>
+        <a class="btn secondary" href="../help.html">ヘルプFAQを見る</a>
       </div>
       <p class="small">※ GitHub Pages上では中身を閲覧できます。実際に使うときはテンプレートを自分のPC/リポジトリで開いてください。</p>
     </section>
@@ -30,9 +31,18 @@
       <div class="steps">
         <div class="step"><div><strong>テンプレートを開く</strong><p>Claude Codeで <code>template/next-ai-product-starter</code> を開きます。</p></div></div>
         <div class="step"><div><strong>/setup を実行</strong><p>チャット入力欄で <code>/setup</code> と入力します。Claude Codeがセットアップ用の手順を読み込みます。</p></div></div>
-        <div class="step"><div><strong>3つの質問に答える</strong><p>サービス名、対象ユーザーの課題、入力と返したい結果だけ答えれば、最小MVPへ編集できます。</p></div></div>
+        <div class="step"><div><strong>いくつかの質問に答える</strong><p>サービス名、対象ユーザー、課題、入力内容、返したい結果に答えれば、最小MVPへ編集できます。</p></div></div>
         <div class="step"><div><strong>起動確認</strong><p><code>npm run dev</code> でローカル起動し、フォーム入力からモック結果表示まで確認します。</p></div></div>
       </div>
+    </section>
+
+    <section class="panel">
+      <h2>プロンプト集との違い</h2>
+      <div class="grid">
+        <div class="mini"><strong>/setup</strong><p>Claude Code向け。初回にテンプレートを読み、質問しながら1画面MVPへ整える入口です。</p></div>
+        <div class="mini"><strong>プロンプト集</strong><p>Claude Code / Codexどちらでも使える、順番に貼って進める台本です。</p></div>
+      </div>
+      <div class="callout">Claude Codeの人はまず <code>/setup</code>。Codexの人はプロンプト集 Step 0 から進めてください。</div>
     </section>
 
     <section class="panel">
@@ -48,7 +58,7 @@ claude
       <h2>/setupがやること</h2>
       <div class="grid">
         <div class="mini"><strong>状態確認</strong><p>Node/npm、主要ファイル、依存関係を確認します。</p></div>
-        <div class="mini"><strong>3問ヒアリング</strong><p>作りたいサービスをMVPに落とし込むための最小質問だけします。</p></div>
+        <div class="mini"><strong>最小ヒアリング</strong><p>作りたいサービスをMVPに落とし込むため、必要な質問だけします。</p></div>
         <div class="mini"><strong>画面編集</strong><p>トップコピー、フォーム、モック結果をテーマに合わせます。</p></div>
         <div class="mini"><strong>起動確認</strong><p>ローカルで見える状態まで確認し、次の改善案を3つ出します。</p></div>
       </div>
