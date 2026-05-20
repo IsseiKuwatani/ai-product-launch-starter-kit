@@ -19,10 +19,10 @@ npm run dev
 - `.claude/skills/setup/SKILL.md`
 - `.claude/commands/setup.md`
 
-Claude Codeでこのフォルダを開いて `/setup` を実行すると、以下を順番に進められます。
+Claude Codeでこのフォルダを開いて `/setup` を実行すると、Supabase/Vercel/外部DBを前提にせず、以下を順番に進められます。
 
 1. Node/npm・依存関係・主要ファイルの確認
-2. 作りたいサービスについて3問だけヒアリング
+2. 作りたいサービスについて5問だけヒアリング
 3. トップページとフォームを1画面MVPに編集
 4. `npm run dev` で起動確認
 5. 次にやる改善案を3つ提案

@@ -1,12 +1,75 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AI Webサービス開発プロンプト集</title><style>
-:root{--ink:#101827;--muted:#647084;--line:#d9e2ec;--soft:#f7fafc;--navy:#062448;--green:#008f68;--mint:#e8fbf4;--blue:#174ea6;--red:#b42318;--amber:#a15c00}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",YuGothic,Meiryo,sans-serif;line-height:1.82;font-size:16px}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.page{max-width:980px;margin:0 auto;padding:0 28px 72px}header{border-bottom:3px solid var(--navy);padding:54px 0 28px;margin-bottom:34px}.doc-label{font-size:13px;font-weight:800;letter-spacing:.12em;color:var(--green);margin-bottom:18px}h1{font-size:40px;line-height:1.25;margin:0 0 18px;letter-spacing:.01em;color:var(--navy)}.subtitle{font-size:19px;color:#303744;margin:0 0 24px;max-width:800px}.meta{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px}.meta th{width:130px;text-align:left;color:var(--muted);font-weight:800;padding:6px 10px 6px 0;border-top:1px solid var(--line)}.meta td{padding:6px 0;border-top:1px solid var(--line)}.back{display:inline-block;margin-top:20px;border:1px solid var(--navy);color:var(--navy);padding:9px 14px;border-radius:6px;font-weight:800}nav{background:var(--soft);border:1px solid var(--line);padding:18px 22px;margin:0 0 34px}nav h2{font-size:18px;margin:0 0 8px}nav ol{columns:2;margin:.2em 0 0;padding-left:1.4em}nav li{break-inside:avoid;margin:.25em 0}section{padding:28px 0;border-top:1px solid var(--line)}section:first-of-type{border-top:0}h2{font-size:26px;line-height:1.35;margin:0 0 14px;padding-top:2px;color:var(--navy)}h3{font-size:20px;margin:24px 0 8px;color:#17233a}p{margin:.55em 0 1em}ul,ol{padding-left:1.35em;margin:.4em 0 1em}li{margin:.32em 0}.lead{font-size:18px;color:#2d3442}.note{border-left:4px solid var(--blue);background:#f4f7fc;padding:13px 16px;margin:16px 0}.warning{border-left-color:var(--amber);background:#fff8eb}.danger{border-left-color:var(--red);background:#fff5f5}.ok{border-left-color:var(--green);background:#f0faf6}code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f0f2f5;padding:.12em .35em;border-radius:4px;font-size:.92em}pre{background:#111827;color:#f8fafc;border-radius:8px;padding:14px 16px;overflow:auto;line-height:1.55;font-size:14px;margin:10px 0 18px}pre code{background:transparent;color:inherit;padding:0;border-radius:0}.prompt{background:#f8fafc;border:1px solid var(--line);padding:13px 15px;border-radius:8px;white-space:pre-wrap;margin:10px 0 16px}.table{width:100%;border-collapse:collapse;margin:12px 0 20px;font-size:14px}.table th,.table td{border:1px solid var(--line);padding:9px 10px;vertical-align:top}.table th{background:var(--soft);text-align:left}.small{font-size:13px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{display:block;border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff;color:inherit}.badge{display:inline-block;background:var(--mint);color:var(--green);font-weight:900;border-radius:999px;padding:5px 10px;font-size:12px;margin-bottom:8px}@media(max-width:720px){.page{padding:0 18px 48px}h1{font-size:30px}nav ol{columns:1}.meta th{display:block;width:auto;border-top:1px solid var(--line);padding-bottom:0}.meta td{display:block;border-top:0;padding-top:0}}@media print{body{font-size:12px;line-height:1.58}.page{max-width:none;padding:0 8mm 0}header{padding:18mm 0 9mm;margin-bottom:8mm}h1{font-size:28px}.subtitle{font-size:14px}.back,.no-print{display:none}nav{page-break-after:always}section{padding:8mm 0;page-break-inside:auto}h2{font-size:18px}h3{font-size:15px}pre{white-space:pre-wrap;font-size:10px;padding:10px}.prompt{font-size:11px}.table{font-size:10.5px}a{color:var(--ink)}}
+<title>AI Webサービス開発プロンプト集 完全版</title><style>
+:root{--ink:#101827;--muted:#647084;--line:#d9e2ec;--soft:#f7fafc;--navy:#062448;--green:#008f68;--mint:#e8fbf4;--blue:#174ea6;--amber:#a15c00}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",YuGothic,Meiryo,sans-serif;line-height:1.82;font-size:16px}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.page{max-width:1060px;margin:0 auto;padding:0 24px 72px}header{border-bottom:3px solid var(--navy);padding:54px 0 28px;margin-bottom:28px}.doc-label{font-size:13px;font-weight:900;letter-spacing:.12em;color:var(--green);margin-bottom:18px}h1{font-size:clamp(34px,6vw,56px);line-height:1.12;margin:0 0 18px;letter-spacing:-.04em;color:var(--navy)}.subtitle{font-size:19px;color:#303744;margin:0 0 24px;max-width:860px}.meta{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px}.meta th{width:130px;text-align:left;color:var(--muted);font-weight:900;padding:6px 10px 6px 0;border-top:1px solid var(--line)}.meta td{padding:6px 0;border-top:1px solid var(--line)}.back{display:inline-block;margin-top:20px;border:1px solid var(--navy);color:var(--navy);padding:9px 14px;border-radius:8px;font-weight:900}nav{background:linear-gradient(180deg,#f7fafc,#f0fbf7);border:1px solid var(--line);border-radius:20px;padding:20px 24px;margin:0 0 28px}nav h2{font-size:20px;margin:0 0 8px;color:var(--navy)}nav ol{columns:2;margin:.2em 0 0;padding-left:1.4em}nav li{break-inside:avoid;margin:.35em 0}section{padding:30px 0;border-top:1px solid var(--line)}h2{font-size:28px;line-height:1.35;margin:0 0 14px;padding-top:2px;color:var(--navy)}h3{font-size:20px;margin:24px 0 8px;color:#17233a}p{margin:.55em 0 1em}.lead{font-size:18px;color:#2d3442}.note{border-left:5px solid var(--green);background:#f3fcf8;padding:15px 18px;margin:18px 0;border-radius:0 12px 12px 0}.bullet{margin:.25em 0 .25em 1em}.prompt{position:relative;margin:16px 0 22px}pre{white-space:pre-wrap;background:#071c34;color:#e5fbf3;border-radius:18px;padding:22px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.7;box-shadow:0 12px 30px rgba(6,36,72,.12)}.copy{position:absolute;right:12px;top:12px;border:0;border-radius:999px;background:var(--green);color:white;font-weight:900;padding:8px 12px;cursor:pointer}.copy.done{background:#174ea6}code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#eef6f3;border-radius:5px;padding:1px 5px}pre code{background:transparent;padding:0}.policy{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:20px 0}.policy div{border:1px solid var(--line);background:#fff;border-radius:16px;padding:14px;font-weight:800}@media(max-width:720px){nav ol{columns:1}.page{padding:0 18px 56px}}
 </style></head><body><div class="page"><header>
-<div class="doc-label">PROMPTS / HTML</div><h1>AI Webサービス開発プロンプト集</h1><p class="subtitle">Claude Code / Codex にそのまま貼って使える、MVP設計・画面設計・実装・AI機能追加・LP改善・デバッグ用のプロンプト集です。</p><table class="meta"><tr><th>提供</th><td>AIプロダクト立ち上げラボ by ツギノメ</td></tr><tr><th>対象</th><td>AI/Webサービス制作を始めたい非エンジニア・事業担当者</td></tr><tr><th>更新</th><td>2026年5月</td></tr></table><a class="back no-print" href="../../index.html">配布キット一覧へ戻る</a></header>
-<nav><h2>目次</h2><ol><li><a href="#intro">使い方</a></li><li><a href="#mvp">MVP設計</a></li><li><a href="#screen">画面設計</a></li><li><a href="#start">実装開始</a></li><li><a href="#ai">AI機能追加</a></li><li><a href="#lp">LP改善</a></li><li><a href="#debug">デバッグ</a></li><li><a href="#review">レビュー</a></li></ol></nav><section id="intro"><h2>1. 使い方</h2><p class="lead">このページは、Claude Code / Codex に貼って使える開発プロンプト集です。</p><p>最初から全部を貼るのではなく、作業フェーズに合うものを1つずつ貼ってください。非エンジニアの方は「いきなり編集せず、まず方針を出して」と添えると安全です。</p></section>
-<section id="mvp"><h2>2. MVP設計プロンプト</h2><div class="prompt">あなたはAIプロダクトのPM兼エンジニアです。
-以下のサービス案を、8週間で最初の公開版まで作る前提でMVPに絞ってください。
+<div class="doc-label">PROMPTS / COMPLETE EDITION</div><h1>AI Webサービス開発プロンプト集 完全版</h1><p class="subtitle">Claude Code / Codex にそのまま貼って使える、実用ボリュームのプロンプト集です。ローカルPCで動く簡単なサービス制作を前提に、Supabase / Vercel / 外部DBを勝手に使わない方針で設計しています。</p><div class="policy"><div>まずローカルで動かす</div><div>最初はモック結果で体験確認</div><div>保存はlocalStorage/JSON/CSVから</div><div>外部サービスは明示依頼まで使わない</div></div><table class="meta"><tr><th>提供</th><td>AIプロダクト立ち上げラボ by ツギノメ</td></tr><tr><th>対象</th><td>AI/Webサービス制作を始めたい非エンジニア・事業担当者</td></tr><tr><th>更新</th><td>2026年5月</td></tr></table><a class="back no-print" href="../index.html">配布キット一覧へ戻る</a></header>
+<nav><h2>目次</h2><ol><li><a href="#">基本方針</a></li><li><a href="#0">0. 最初に貼る「進め方固定」プロンプト</a></li><li><a href="#1">1. アイデア整理プロンプト</a></li><li><a href="#2-MVP">2. MVP設計プロンプト</a></li><li><a href="#3">3. 画面設計プロンプト</a></li><li><a href="#4-1-MVP">4. 1画面MVP実装プロンプト</a></li><li><a href="#5-3-MVP">5. 3画面MVP実装プロンプト</a></li><li><a href="#6-localStorage">6. localStorage保存プロンプト</a></li><li><a href="#7-JSON-CSV">7. JSON / CSVダウンロードプロンプト</a></li><li><a href="#8-AI">8. AI機能追加プロンプト</a></li><li><a href="#9-AI">9. AI出力を安定させるプロンプト設計</a></li><li><a href="#10-LP">10. LP改善プロンプト</a></li><li><a href="#11">11. フォーム改善プロンプト</a></li><li><a href="#12">12. 結果画面改善プロンプト</a></li><li><a href="#13">13. サンプルサービス生成プロンプト</a></li><li><a href="#14">14. デバッグ依頼プロンプト</a></li><li><a href="#15">15. レビュープロンプト</a></li><li><a href="#16-README">16. README作成プロンプト</a></li><li><a href="#17">17. 完成前チェックプロンプト</a></li></ol></nav><section id=""><h2>基本方針</h2><p class="bullet">• まずは **ローカルで動く1画面〜3画面のMVP** を作る</p>
+<p class="bullet">• 最初からログイン、DB、決済、管理画面、外部デプロイを入れない</p>
+<p class="bullet">• 保存が必要な場合は、初期版では `localStorage` / JSONダウンロード / CSVダウンロードで代替する</p>
+<p class="bullet">• AI API接続は後回し。最初はモック結果でユーザー体験を確認する</p>
+<p class="bullet">• APIキーや秘密情報は `.env.local` に置き、コードに直書きしない</p>
+<p class="bullet">• Supabase / Vercel / Firebase / AWS などを勝手に導入しない</p>
+<p class="bullet">• 実装後は必ず `npm run dev` とブラウザ確認を行う</p>
+<p>---</p></section>
+<section id="0"><h2>0. 最初に貼る「進め方固定」プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>あなたは、非エンジニアの事業担当者と一緒にAI WebサービスMVPを作るPM兼エンジニアです。
+
+このプロジェクトでは、まずローカルPC上で動く簡単なサービスを作ります。
+Supabase、Vercel、Firebase、AWS、外部DB、ログイン機能、決済機能は、こちらが明示的に依頼するまで導入しないでください。
+
+進め方:
+1. まず現在のファイル構成を確認する
+2. いきなり実装せず、最小MVP方針を短く出す
+3. 1回の変更は小さくする
+4. 最初はモックデータで動く体験を作る
+5. 保存が必要な場合は、まず localStorage / JSONダウンロード / CSVダウンロードで対応する
+6. APIキーや秘密情報はコードに直書きしない
+7. 実装後は確認手順を出す
+
+完成条件:
+- `npm run dev` で起動できる
+- ブラウザで入力→結果表示まで確認できる
+- スマホ幅でも大きく崩れない
+- ユーザーが次に何をすればいいか分かる</code></pre></div>
+<p>---</p></section>
+<section id="1"><h2>1. アイデア整理プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>以下のアイデアを、簡単なWebサービスにできる形へ整理してください。
+まだ曖昧でも構いません。質問しすぎず、仮説を置いて進めてください。
+
+# アイデア
+[ここに書く]
+
+# 誰向けか
+[例: 個人事業主、採用担当、営業担当、店舗オーナー、コーチ、先生など]
+
+# 解決したい悩み
+[ここに書く]
+
+# ユーザーが入力できそうな情報
+[例: 悩み、業種、URL、文章、商品名、条件など]
+
+# 返したい結果
+[例: 診断結果、改善提案、文章案、チェックリスト、見積もり、比較表など]
+
+出力してください:
+1. サービス名案 10個
+2. 一言説明
+3. 想定ユーザー
+4. ユーザーのBefore/After
+5. 最初に作るべき画面
+6. 入力項目
+7. 結果表示の内容
+8. まず作らないこと
+9. 1日で作るならどこまでか
+10. 1週間で作るならどこまでか</code></pre></div>
+<p>---</p></section>
+<section id="2-MVP"><h2>2. MVP設計プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>あなたはAIプロダクトのPMです。
+以下のサービス案を、最初のMVPに絞ってください。
+
+重要:
+- Supabase、Vercel、外部DB、ログイン、決済は前提にしない
+- まずローカルで動くWebサービスにする
+- 保存が必要な場合は localStorage または JSON/CSVダウンロードで代替する
+- AI APIは後から追加できるようにし、最初はモック結果で体験を作る
 
 # サービス案
 [ここに記入]
@@ -17,70 +80,239 @@
 # ユーザーの悩み
 [ここに記入]
 
-# 使えるAI/API/データ
+# ユーザーが入力する内容
+[ここに記入]
+
+# 返したい結果
 [ここに記入]
 
 出力してください:
 1. MVPの目的
-2. 最初に作るべき3画面
-3. 最初に作るべき5機能
-4. 作らないことリスト
-5. 2週間ごとの実装計画</div></section>
-<section id="screen"><h2>3. 画面設計プロンプト</h2><div class="prompt">以下のMVPをもとに、Webアプリの画面設計をしてください。
+2. ユーザーが得る価値
+3. 最初に作る画面 最大3つ
+4. 最初に作る機能 最大5つ
+5. 入力項目一覧
+6. 結果表示の構成
+7. モック結果のサンプル
+8. 作らないことリスト
+9. ローカル保存が必要かどうか
+10. 実装順序
+11. 完成判定チェックリスト</code></pre></div>
+<p>---</p></section>
+<section id="3"><h2>3. 画面設計プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>以下のMVPをもとに、Webアプリの画面設計をしてください。
 
-# MVP
+前提:
+- Next.jsで作る
+- まずはローカル起動で確認する
+- Supabase / Vercel / 外部DB / ログインは使わない
+- スマホでも使いやすくする
+
+# MVP概要
 [ここにMVP概要]
 
-# 必須画面
-- トップページ
-- 入力フォーム
-- 結果ページ
-- 問い合わせ/相談導線
+# 想定ユーザー
+[誰向けか]
+
+# 入力項目
+[入力してもらう内容]
+
+# 結果表示
+[返したい内容]
 
 出力してください:
-- 各画面の目的
-- 表示する情報
-- ボタン文言
-- 入力項目
-- ユーザー導線
-- Next.jsでのファイル構成案</div></section>
-<section id="start"><h2>4. 実装開始プロンプト</h2><div class="prompt">このリポジトリで、Next.jsのAI WebサービスMVPを作ります。
-まず以下を実装してください。
+1. 画面一覧
+2. 各画面の目的
+3. 各画面の見出し案
+4. ボタン文言
+5. フォーム項目
+6. 結果表示のカード構成
+7. 空欄時のエラー文言
+8. ローディング表示の文言
+9. スマホ表示で注意する点
+10. Next.jsで編集するファイル案</code></pre></div>
+<p>---</p></section>
+<section id="4-1-MVP"><h2>4. 1画面MVP実装プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>このリポジトリで、まず1画面で完結するAI Webサービス風MVPを作ってください。
 
-# 作りたいもの
-[サービス名と概要]
+重要:
+- Supabase、Vercel、外部DB、ログイン、決済は使わない
+- API接続なし。まずはモック結果で動かす
+- 1画面内で、説明 → 入力 → 結果表示 → 次の行動 まで完結させる
+- スマホでも見やすくする
+- 実装後に確認コマンドを出す
 
-# 最初の実装範囲
-- トップページ
-- 入力フォーム
-- 結果ページの仮表示
+# サービス名
+[ここに記入]
 
-# デザイン
+# 誰向けか
+[ここに記入]
+
+# 解決する課題
+[ここに記入]
+
+# 入力項目
+[例: 業種、悩み、目標、現在の状況など]
+
+# 表示したい結果
+[例: 診断結果、改善提案、次にやること、注意点など]
+
+# デザイン希望
 - 白背景
 - 濃紺とグリーン
 - 余白多め
 - 日本語の太ゴシック
 - スマホで見やすい
 
-# 注意
-- まずはAPI接続なしでモックで動かす
-- 各ファイルの役割を説明する
-- 実装後に確認手順を教える</div></section>
-<section id="ai"><h2>5. AI機能追加プロンプト</h2><div class="prompt">現在のモック結果ページに、AI生成処理を追加したいです。
+実装してください:
+1. トップの説明
+2. 入力フォーム
+3. 送信ボタン
+4. 入力内容に応じたモック結果表示
+5. 結果の下に「次にやること」3つ
+6. 相談/問い合わせの仮CTA
+
+最後に出力してください:
+- 変更したファイル
+- 確認手順
+- 次にAI APIを足すならどこを変更するか</code></pre></div>
+<p>---</p></section>
+<section id="5-3-MVP"><h2>5. 3画面MVP実装プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>このリポジトリで、3画面構成のシンプルなWebサービスMVPを作ってください。
+
+前提:
+- Supabase、Vercel、外部DB、ログイン、決済は使わない
+- まずローカルで動く状態を優先する
+- 保存が必要なら localStorage を使う
+- AI API接続は後回し。最初はモック結果でよい
+
+# サービス概要
+[ここに記入]
+
+# 画面構成
+1. トップページ: 何ができるか説明し、診断/作成開始ボタンを置く
+2. 入力ページ: ユーザーが情報を入力する
+3. 結果ページ: 入力内容をもとにモック結果を表示する
+
+# 入力項目
+[ここに記入]
+
+# 結果表示
+[ここに記入]
+
+実装してください:
+- 必要なルーティング
+- 入力フォーム
+- localStorageでの一時保存
+- 結果ページでの読み出し
+- 入力がない場合の戻り導線
+- スマホ対応
+
+実装後に確認してください:
+1. トップから入力ページへ進める
+2. 入力して結果ページへ進める
+3. リロードしても必要最低限の情報が残る
+4. 入力なしで結果ページを開いた時に案内が出る</code></pre></div>
+<p>---</p></section>
+<section id="6-localStorage"><h2>6. localStorage保存プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>現在のWebサービスに、localStorageでの一時保存機能を追加してください。
+
+重要:
+- 外部DB、Supabase、Firebaseは使わない
+- 個人情報や秘密情報は保存しない前提にする
+- 保存していることがユーザーに分かる表示を入れる
+- クリアボタンを用意する
+
+追加したい保存内容:
+[保存したい入力内容や結果]
+
+実装してください:
+1. 入力途中の自動保存
+2. ページ再読み込み時の復元
+3. 保存済み表示
+4. 保存内容を消すボタン
+5. 個人情報は入れない注意書き
+
+確認手順も出してください。</code></pre></div>
+<p>---</p></section>
+<section id="7-JSON-CSV"><h2>7. JSON / CSVダウンロードプロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>現在の結果表示に、ダウンロード機能を追加してください。
+
+前提:
+- サーバー保存や外部DBは使わない
+- ユーザー自身のPCに保存できる形にする
+
+追加したい機能:
+- 結果をJSONでダウンロード
+- 可能ならCSVでもダウンロード
+- ファイル名に日付を入れる
+
+実装してください:
+1. JSONダウンロードボタン
+2. CSVダウンロードボタン
+3. ダウンロード対象データの整形
+4. 文字化けしにくいCSV出力
+5. 使い方の短い説明文
+
+注意:
+- ブラウザだけで動く実装にしてください
+- 外部ライブラリが不要なら使わないでください</code></pre></div>
+<p>---</p></section>
+<section id="8-AI"><h2>8. AI機能追加プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>現在のモック結果に、AI生成処理を追加する設計をしてください。
+
+重要:
+- まず設計だけ出してください。いきなり実装しないでください
+- APIキーは `.env.local` に置き、コードに直書きしないでください
+- Supabase、Vercel、外部DBは前提にしないでください
+- ローカル開発で動く構成を優先してください
+- ユーザーの入力をそのまま信用しないでください
 
 # 入力項目
 [入力項目を書く]
 
 # AIに生成してほしい結果
-[診断/提案/文章生成など]
+[診断/提案/文章生成/要約/分類など]
 
 # 期待する出力形式
 [箇条書き、JSON、表など]
 
-まず、API接続を安全に追加する設計を提案してください。
-その後、最小実装を行ってください。
-.env.local を使い、APIキーをコードに直接書かないでください。</div></section>
-<section id="lp"><h2>6. LP改善プロンプト</h2><div class="prompt">このAI WebサービスのLPを改善してください。
+出力してください:
+1. どこにAPI処理を置くか
+2. `.env.local` に必要な変数
+3. プロンプト設計
+4. エラー時の表示
+5. ローディング表示
+6. コストが増えすぎない工夫
+7. 危険な入力への対策
+8. 実装手順
+9. 実装後の確認方法
+
+設計を出した後、私が「実装して」と言ったら最小実装してください。</code></pre></div>
+<p>---</p></section>
+<section id="9-AI"><h2>9. AI出力を安定させるプロンプト設計</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>このサービスでAIに安定した結果を出させるため、システムプロンプトとユーザープロンプトを設計してください。
+
+# サービス概要
+[ここに記入]
+
+# ユーザー入力
+[入力項目]
+
+# 欲しい出力
+[結果の形式]
+
+# 避けたい出力
+[曖昧、長すぎる、専門用語が多い、断定しすぎる等]
+
+出力してください:
+1. システムプロンプト
+2. ユーザー入力を埋め込むテンプレート
+3. JSONで返す場合のスキーマ
+4. 失敗しやすい入力例
+5. 失敗時のフォールバック文言
+6. 出力品質をチェックする観点
+7. そのままコードに入れやすい形のプロンプト</code></pre></div>
+<p>---</p></section>
+<section id="10-LP"><h2>10. LP改善プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>このAI WebサービスのLPを改善してください。
+
+前提:
+- 誇大表現より、誰に何ができるかを具体化する
+- スマホで見た時に最初の3秒で価値が分かるようにする
+- CTAは「無料で試す」「診断を始める」「結果を作る」など具体的にする
 
 # ターゲット
 [誰向けか]
@@ -95,13 +327,93 @@
 [無料診断/相談予約/LINE登録など]
 
 改善してください:
-1. ファーストビュー見出し
-2. サブコピー
-3. CTAボタン
+1. ファーストビュー見出し 10案
+2. サブコピー 5案
+3. CTAボタン 10案
 4. 課題セクション
-5. 事例/使い方セクション
-6. FAQ 10個</div></section>
-<section id="debug"><h2>7. デバッグ依頼プロンプト</h2><div class="prompt">以下のエラーを解決してください。
+5. 解決策セクション
+6. 使い方3ステップ
+7. 結果サンプル
+8. FAQ 12個
+9. 反論処理コピー
+10. スマホでの見せ方
+11. そのまま実装するためのセクション構成</code></pre></div>
+<p>---</p></section>
+<section id="11"><h2>11. フォーム改善プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>現在のフォームを、ユーザーが入力しやすい形に改善してください。
+
+# サービス概要
+[ここに記入]
+
+# 現在の入力項目
+[ここに記入]
+
+# ユーザーが面倒に感じそうな点
+[ここに記入]
+
+改善してください:
+1. 入力項目を減らす案
+2. プレースホルダー文言
+3. 入力例
+4. 必須/任意の分け方
+5. エラー文言
+6. 送信ボタン文言
+7. 入力後に出す期待値調整文
+8. スマホで入力しやすくする工夫
+
+必要なら実装もしてください。ただし外部DBやログインは追加しないでください。</code></pre></div>
+<p>---</p></section>
+<section id="12"><h2>12. 結果画面改善プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>現在の結果画面を、ユーザーが「使えそう」と感じる内容に改善してください。
+
+# サービス概要
+[ここに記入]
+
+# 現在の結果表示
+[ここに記入]
+
+# ユーザーに起こしてほしい行動
+[例: 保存、コピー、問い合わせ、次の入力、家族/上司に共有など]
+
+改善してください:
+1. 結果の見出し
+2. 重要度の高い順の表示
+3. スコア/診断ラベル
+4. 具体的な次のアクション
+5. 注意点
+6. コピー用ボタン
+7. ダウンロード導線
+8. 相談/問い合わせ導線
+9. もう一度試す導線
+10. モック結果の質を上げる文面
+
+実装する場合は、まずモックで動く形にしてください。</code></pre></div>
+<p>---</p></section>
+<section id="13"><h2>13. サンプルサービス生成プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>以下のジャンルで、簡単に作れるAI Webサービス案を20個出してください。
+
+# ジャンル
+[例: 採用、営業、教育、フィットネス、美容、不動産、士業、店舗、SNS運用など]
+
+条件:
+- 1画面または3画面で作れる
+- 最初は外部DBなしで成立する
+- 入力→結果表示の体験が作れる
+- 後からAI APIを足すと価値が上がる
+- 非エンジニアにも説明しやすい
+
+各案について出力してください:
+1. サービス名
+2. 誰向けか
+3. 入力内容
+4. 出力内容
+5. 最初のモック結果例
+6. 有料化するなら何に課金できるか
+7. 難易度 1〜5</code></pre></div>
+<p>---</p></section>
+<section id="14"><h2>14. デバッグ依頼プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>以下のエラーを解決してください。
+
+重要:
+- いきなり大きく書き換えないでください
+- 原因を特定してから最小修正してください
+- Supabase、Vercel、外部DBなどを勝手に追加しないでください
 
 # 起きていること
 [現象]
@@ -116,22 +428,75 @@
 [期待]
 
 お願い:
-- 原因候補を3つ出す
-- 最も可能性が高い原因から確認する
-- 修正前にどのファイルを見るべきか教える
-- 修正後の確認コマンドも出す</div></section>
-<section id="review"><h2>8. レビュープロンプト</h2><div class="prompt">現在の変更内容をレビューしてください。
+1. 原因候補を3つ出す
+2. 最も可能性が高い原因から確認する
+3. 修正前に見るべきファイルを示す
+4. 最小修正を行う
+5. 修正後の確認コマンドを出す
+6. 再発防止策を1つだけ出す</code></pre></div>
+<p>---</p></section>
+<section id="15"><h2>15. レビュープロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>現在の変更内容をレビューしてください。
 
 観点:
 - ユーザーに価値が伝わるか
 - MVPとして作りすぎていないか
 - スマホで使いやすいか
+- 入力→結果表示が自然か
 - エラー時の表示があるか
 - CTAが明確か
 - APIキーや秘密情報がコードに入っていないか
+- Supabase、Vercel、外部DB、ログインなどが勝手に追加されていないか
+- 初心者がREADMEを見て起動できるか
 
 出力:
 1. 良い点
 2. 問題点
 3. 優先修正TOP5
-4. そのまま貼れる修正プロンプト</div></section></div></body></html>
+4. そのまま貼れる修正プロンプト
+5. リリース前チェックリスト</code></pre></div>
+<p>---</p></section>
+<section id="16-README"><h2>16. README作成プロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>このプロジェクトのREADMEを、非エンジニアにも分かるように整えてください。
+
+前提:
+- ローカル起動を最優先に説明する
+- VercelやSupabaseなどの外部サービス前提にはしない
+- コマンドはコピペしやすくする
+
+READMEに入れてください:
+1. サービス名
+2. 何ができるか
+3. 画面の説明
+4. 起動方法
+5. 使い方
+6. 編集する主なファイル
+7. AI APIを後から追加する場合の注意
+8. よくあるエラー
+9. 次に改善するなら何か
+
+文体:
+- 初心者向け
+- 具体的
+- 短い見出し多め</code></pre></div>
+<p>---</p></section>
+<section id="17"><h2>17. 完成前チェックプロンプト</h2><div class="prompt"><button class="copy" type="button">コピー</button><pre><code>このMVPが「簡単なサービスとして人に見せられる状態」になっているかチェックしてください。
+
+チェックしてください:
+1. 起動できるか
+2. トップの価値が伝わるか
+3. 入力フォームが使えるか
+4. 結果表示が役に立つか
+5. エラー時に迷わないか
+6. スマホで見やすいか
+7. 余計な外部サービスに依存していないか
+8. APIキーや秘密情報が漏れていないか
+9. README通りに起動できるか
+10. 次にやることが明確か
+
+出力:
+- 合格/要修正
+- 要修正ポイント
+- 30分で直せる改善
+- 2時間で直せる改善
+- そのまま貼れる修正プロンプト</code></pre></div></section></div><script>
+document.querySelectorAll('.copy').forEach(btn=>{btn.addEventListener('click',async()=>{const code=btn.parentElement.querySelector('code').innerText;await navigator.clipboard.writeText(code);btn.textContent='コピー済み';btn.classList.add('done');setTimeout(()=>{btn.textContent='コピー';btn.classList.remove('done')},1400);})});
+</script></body></html>
