@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Webサービス制作スターターキット</title>
+  <meta name="description" content="AIプロダクト立ち上げラボ by ツギノメの無料キット。Claude Code/Codex導入マニュアル、開発プロンプト、skills/agents、企画ワークシート、制作テンプレートを配布。" />
+  <style>
+    :root{--navy:#062448;--green:#008f68;--mint:#e5fbf3;--bg:#f8fcfa;--text:#143044}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:1080px;margin:auto;padding:32px 20px 64px}.badge{display:inline-block;background:var(--mint);color:var(--green);font-weight:800;border-radius:999px;padding:10px 16px}.hero{background:white;border:1px solid #cfeee4;border-radius:28px;padding:36px;box-shadow:0 10px 30px rgba(6,36,72,.06)}
+    h1{font-size:clamp(34px,6vw,64px);line-height:1.05;color:var(--navy);margin:18px 0}p{line-height:1.8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}.card{background:white;border:1px solid #d8eee6;border-radius:22px;padding:22px;text-decoration:none;color:inherit;box-shadow:0 6px 18px rgba(6,36,72,.04)}.card strong{display:block;color:var(--navy);font-size:20px;margin-bottom:8px}.num{color:var(--green);font-weight:900}.cta{display:inline-block;background:var(--green);color:white;text-decoration:none;border-radius:14px;padding:16px 22px;font-weight:900;margin-top:18px}.small{color:#64748b;font-size:14px}.hello{font-weight:900;color:var(--green)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <span class="badge">LINE登録特典</span>
+      <h1>AI Webサービス制作<br>スターターキット</h1>
+      <p class="hello" id="hello">ようこそ、AIプロダクト立ち上げラボへ</p>
+      <p>Claude Code / Codex を使って、非エンジニアでもAI Webサービスの最初の形を作り始めるための5点セットです。</p>
+      <a class="cta" href="https://timerex.net/s/tsuginome/da96046c">自分のテーマで相談する</a>
+      <p class="small">※ URLに <code>?name=お名前</code> が付いている場合は、ページ上部にお名前を表示します。LINEプロフィール連携はLIFF化で拡張予定です。</p>
+    </section>
+    <section class="grid">
+      <a class="card" href="docs/01-claude-code-codex-setup-manual.md"><span class="num">01</span><strong>導入マニュアル</strong><p>Claude Code / Codexを使って開発を始めるための手順書。</p></a>
+      <a class="card" href="prompts/02-development-prompts.md"><span class="num">02</span><strong>開発プロンプト集</strong><p>MVP設計、画面設計、実装、デバッグに使えるコピペ文面。</p></a>
+      <a class="card" href="skills/03-skills-and-agents.md"><span class="num">03</span><strong>skills・エージェント</strong><p>PM、エンジニア、UXライター、レビュー担当をAIに任せる設計集。</p></a>
+      <a class="card" href="docs/04-product-planning-worksheet.md"><span class="num">04</span><strong>企画ワークシート</strong><p>サービス案を要件定義に変換する記入式シート。</p></a>
+      <a class="card" href="template/next-ai-product-starter/"><span class="num">05</span><strong>制作テンプレート</strong><p>Next.jsでAI WebサービスMVPを作るためのスターター。</p></a>
+    </section>
+  </main>
+  <script>
+    const p = new URLSearchParams(location.search);
+    const name = p.get('name');
+    if (name) document.getElementById('hello').textContent = `ようこそ、${name}さん`;
+  </script>
+</body>
+</html>
