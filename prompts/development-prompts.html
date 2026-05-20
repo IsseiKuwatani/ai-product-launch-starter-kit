@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI Webサービス開発プロンプト集</title><style>
+:root{--ink:#101827;--muted:#647084;--line:#d9e2ec;--soft:#f7fafc;--navy:#062448;--green:#008f68;--mint:#e8fbf4;--blue:#174ea6;--red:#b42318;--amber:#a15c00}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",YuGothic,Meiryo,sans-serif;line-height:1.82;font-size:16px}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.page{max-width:980px;margin:0 auto;padding:0 28px 72px}header{border-bottom:3px solid var(--navy);padding:54px 0 28px;margin-bottom:34px}.doc-label{font-size:13px;font-weight:800;letter-spacing:.12em;color:var(--green);margin-bottom:18px}h1{font-size:40px;line-height:1.25;margin:0 0 18px;letter-spacing:.01em;color:var(--navy)}.subtitle{font-size:19px;color:#303744;margin:0 0 24px;max-width:800px}.meta{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px}.meta th{width:130px;text-align:left;color:var(--muted);font-weight:800;padding:6px 10px 6px 0;border-top:1px solid var(--line)}.meta td{padding:6px 0;border-top:1px solid var(--line)}.back{display:inline-block;margin-top:20px;border:1px solid var(--navy);color:var(--navy);padding:9px 14px;border-radius:6px;font-weight:800}nav{background:var(--soft);border:1px solid var(--line);padding:18px 22px;margin:0 0 34px}nav h2{font-size:18px;margin:0 0 8px}nav ol{columns:2;margin:.2em 0 0;padding-left:1.4em}nav li{break-inside:avoid;margin:.25em 0}section{padding:28px 0;border-top:1px solid var(--line)}section:first-of-type{border-top:0}h2{font-size:26px;line-height:1.35;margin:0 0 14px;padding-top:2px;color:var(--navy)}h3{font-size:20px;margin:24px 0 8px;color:#17233a}p{margin:.55em 0 1em}ul,ol{padding-left:1.35em;margin:.4em 0 1em}li{margin:.32em 0}.lead{font-size:18px;color:#2d3442}.note{border-left:4px solid var(--blue);background:#f4f7fc;padding:13px 16px;margin:16px 0}.warning{border-left-color:var(--amber);background:#fff8eb}.danger{border-left-color:var(--red);background:#fff5f5}.ok{border-left-color:var(--green);background:#f0faf6}code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f0f2f5;padding:.12em .35em;border-radius:4px;font-size:.92em}pre{background:#111827;color:#f8fafc;border-radius:8px;padding:14px 16px;overflow:auto;line-height:1.55;font-size:14px;margin:10px 0 18px}pre code{background:transparent;color:inherit;padding:0;border-radius:0}.prompt{background:#f8fafc;border:1px solid var(--line);padding:13px 15px;border-radius:8px;white-space:pre-wrap;margin:10px 0 16px}.table{width:100%;border-collapse:collapse;margin:12px 0 20px;font-size:14px}.table th,.table td{border:1px solid var(--line);padding:9px 10px;vertical-align:top}.table th{background:var(--soft);text-align:left}.small{font-size:13px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{display:block;border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff;color:inherit}.badge{display:inline-block;background:var(--mint);color:var(--green);font-weight:900;border-radius:999px;padding:5px 10px;font-size:12px;margin-bottom:8px}@media(max-width:720px){.page{padding:0 18px 48px}h1{font-size:30px}nav ol{columns:1}.meta th{display:block;width:auto;border-top:1px solid var(--line);padding-bottom:0}.meta td{display:block;border-top:0;padding-top:0}}@media print{body{font-size:12px;line-height:1.58}.page{max-width:none;padding:0 8mm 0}header{padding:18mm 0 9mm;margin-bottom:8mm}h1{font-size:28px}.subtitle{font-size:14px}.back,.no-print{display:none}nav{page-break-after:always}section{padding:8mm 0;page-break-inside:auto}h2{font-size:18px}h3{font-size:15px}pre{white-space:pre-wrap;font-size:10px;padding:10px}.prompt{font-size:11px}.table{font-size:10.5px}a{color:var(--ink)}}
+</style></head><body><div class="page"><header>
+<div class="doc-label">PROMPTS / HTML</div><h1>AI Webサービス開発プロンプト集</h1><p class="subtitle">Claude Code / Codex にそのまま貼って使える、MVP設計・画面設計・実装・AI機能追加・LP改善・デバッグ用のプロンプト集です。</p><table class="meta"><tr><th>提供</th><td>AIプロダクト立ち上げラボ by ツギノメ</td></tr><tr><th>対象</th><td>AI/Webサービス制作を始めたい非エンジニア・事業担当者</td></tr><tr><th>更新</th><td>2026年5月</td></tr></table><a class="back no-print" href="../../index.html">配布キット一覧へ戻る</a></header>
+<nav><h2>目次</h2><ol><li><a href="#intro">使い方</a></li><li><a href="#mvp">MVP設計</a></li><li><a href="#screen">画面設計</a></li><li><a href="#start">実装開始</a></li><li><a href="#ai">AI機能追加</a></li><li><a href="#lp">LP改善</a></li><li><a href="#debug">デバッグ</a></li><li><a href="#review">レビュー</a></li></ol></nav><section id="intro"><h2>1. 使い方</h2><p class="lead">このページは、Claude Code / Codex に貼って使える開発プロンプト集です。</p><p>最初から全部を貼るのではなく、作業フェーズに合うものを1つずつ貼ってください。非エンジニアの方は「いきなり編集せず、まず方針を出して」と添えると安全です。</p></section>
+<section id="mvp"><h2>2. MVP設計プロンプト</h2><div class="prompt">あなたはAIプロダクトのPM兼エンジニアです。
+以下のサービス案を、8週間で最初の公開版まで作る前提でMVPに絞ってください。
+
+# サービス案
+[ここに記入]
+
+# 想定ユーザー
+[ここに記入]
+
+# ユーザーの悩み
+[ここに記入]
+
+# 使えるAI/API/データ
+[ここに記入]
+
+出力してください:
+1. MVPの目的
+2. 最初に作るべき3画面
+3. 最初に作るべき5機能
+4. 作らないことリスト
+5. 2週間ごとの実装計画</div></section>
+<section id="screen"><h2>3. 画面設計プロンプト</h2><div class="prompt">以下のMVPをもとに、Webアプリの画面設計をしてください。
+
+# MVP
+[ここにMVP概要]
+
+# 必須画面
+- トップページ
+- 入力フォーム
+- 結果ページ
+- 問い合わせ/相談導線
+
+出力してください:
+- 各画面の目的
+- 表示する情報
+- ボタン文言
+- 入力項目
+- ユーザー導線
+- Next.jsでのファイル構成案</div></section>
+<section id="start"><h2>4. 実装開始プロンプト</h2><div class="prompt">このリポジトリで、Next.jsのAI WebサービスMVPを作ります。
+まず以下を実装してください。
+
+# 作りたいもの
+[サービス名と概要]
+
+# 最初の実装範囲
+- トップページ
+- 入力フォーム
+- 結果ページの仮表示
+
+# デザイン
+- 白背景
+- 濃紺とグリーン
+- 余白多め
+- 日本語の太ゴシック
+- スマホで見やすい
+
+# 注意
+- まずはAPI接続なしでモックで動かす
+- 各ファイルの役割を説明する
+- 実装後に確認手順を教える</div></section>
+<section id="ai"><h2>5. AI機能追加プロンプト</h2><div class="prompt">現在のモック結果ページに、AI生成処理を追加したいです。
+
+# 入力項目
+[入力項目を書く]
+
+# AIに生成してほしい結果
+[診断/提案/文章生成など]
+
+# 期待する出力形式
+[箇条書き、JSON、表など]
+
+まず、API接続を安全に追加する設計を提案してください。
+その後、最小実装を行ってください。
+.env.local を使い、APIキーをコードに直接書かないでください。</div></section>
+<section id="lp"><h2>6. LP改善プロンプト</h2><div class="prompt">このAI WebサービスのLPを改善してください。
+
+# ターゲット
+[誰向けか]
+
+# ベネフィット
+[何が嬉しいか]
+
+# 不安
+[ユーザーが不安に思うこと]
+
+# CTA
+[無料診断/相談予約/LINE登録など]
+
+改善してください:
+1. ファーストビュー見出し
+2. サブコピー
+3. CTAボタン
+4. 課題セクション
+5. 事例/使い方セクション
+6. FAQ 10個</div></section>
+<section id="debug"><h2>7. デバッグ依頼プロンプト</h2><div class="prompt">以下のエラーを解決してください。
+
+# 起きていること
+[現象]
+
+# 実行したコマンド
+[コマンド]
+
+# エラーメッセージ
+[エラー全文]
+
+# 期待する動き
+[期待]
+
+お願い:
+- 原因候補を3つ出す
+- 最も可能性が高い原因から確認する
+- 修正前にどのファイルを見るべきか教える
+- 修正後の確認コマンドも出す</div></section>
+<section id="review"><h2>8. レビュープロンプト</h2><div class="prompt">現在の変更内容をレビューしてください。
+
+観点:
+- ユーザーに価値が伝わるか
+- MVPとして作りすぎていないか
+- スマホで使いやすいか
+- エラー時の表示があるか
+- CTAが明確か
+- APIキーや秘密情報がコードに入っていないか
+
+出力:
+1. 良い点
+2. 問題点
+3. 優先修正TOP5
+4. そのまま貼れる修正プロンプト</div></section></div></body></html>
