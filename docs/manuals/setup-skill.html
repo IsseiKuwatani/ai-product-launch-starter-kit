@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>/setupで始める | AI Webサービス制作スターターキット</title>
+  <meta name="description" content="Claude Codeでテンプレートを開き、/setup からAI WebサービスMVPを立ち上げる手順。" />
+  <style>
+    :root{--navy:#062448;--green:#008f68;--mint:#e5fbf3;--bg:#f8fcfa;--text:#143044;--line:#cfeee4;--yellow:#fff6d8}
+    *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif;background:linear-gradient(180deg,#f8fcfa,#eefaf5);color:var(--text)}
+    .wrap{max-width:960px;margin:auto;padding:28px 18px 72px}.crumb{color:#64748b;font-size:14px;margin-bottom:20px}.crumb a{color:var(--green);font-weight:800}.hero{background:#fff;border:1px solid var(--line);border-radius:30px;padding:34px;box-shadow:0 20px 50px rgba(6,36,72,.08);position:relative;overflow:hidden}.hero:after{content:"/setup";position:absolute;right:-20px;top:16px;font-size:100px;font-weight:1000;color:rgba(0,143,104,.08);letter-spacing:-.08em}.badge{display:inline-flex;gap:8px;align-items:center;background:var(--mint);color:var(--green);font-weight:900;border-radius:999px;padding:10px 16px}.badge:before{content:"✓"}h1{font-size:clamp(34px,6vw,60px);line-height:1.08;margin:18px 0;color:var(--navy);letter-spacing:-.04em}p{line-height:1.85}.lead{font-size:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;margin-top:18px;box-shadow:0 10px 24px rgba(6,36,72,.05)}h2{color:var(--navy);font-size:28px;margin:0 0 12px}.steps{counter-reset:step;display:grid;gap:14px}.step{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:#fbfffd;border:1px solid #d8eee6;border-radius:18px;padding:18px}.step:before{counter-increment:step;content:counter(step);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-weight:1000}.code{background:#071c34;color:#e5fbf3;border-radius:16px;padding:18px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.65}.callout{background:var(--yellow);border:1px solid #f6dc7a;border-radius:20px;padding:18px;font-weight:800}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.btn{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;text-decoration:none;border-radius:16px;padding:16px 20px;font-weight:1000;box-shadow:0 10px 22px rgba(0,143,104,.22)}.btn.secondary{background:#fff;color:var(--green);border:2px solid var(--green);box-shadow:none}.btn:after{content:"→"}.small{color:#64748b;font-size:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.mini{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px}.mini strong{display:block;color:var(--navy);margin-bottom:6px}.check li{margin:10px 0}.check li::marker{color:var(--green)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="crumb"><a href="../../index.html">スターターキットTOP</a> / /setupで始める</div>
+    <section class="hero">
+      <span class="badge">Claude Code 対応</span>
+      <h1>立ち上げ後は<br><code>/setup</code>で進めればOK</h1>
+      <p class="lead">テンプレート内に <strong>.claude/skills/setup/SKILL.md</strong> と <strong>.claude/commands/setup.md</strong> を入れています。Claude Codeでテンプレートを開いて <strong>/setup</strong> を実行すると、初期確認・質問・1画面MVP化までを案内できます。</p>
+      <div class="cta-row">
+        <a class="btn" href="../../skills/setup/">setup skillを見る</a>
+        <a class="btn secondary" href="../../template/next-ai-product-starter/">テンプレートを見る</a>
+      </div>
+      <p class="small">※ GitHub Pages上では中身を閲覧できます。実際に使うときはテンプレートを自分のPC/リポジトリで開いてください。</p>
+    </section>
+
+    <section class="panel">
+      <h2>使い方</h2>
+      <div class="steps">
+        <div class="step"><div><strong>テンプレートを開く</strong><p>Claude Codeで <code>template/next-ai-product-starter</code> を開きます。</p></div></div>
+        <div class="step"><div><strong>/setup を実行</strong><p>チャット入力欄で <code>/setup</code> と入力します。Claude Codeがセットアップ用の手順を読み込みます。</p></div></div>
+        <div class="step"><div><strong>3つの質問に答える</strong><p>サービス名、対象ユーザーの課題、入力と返したい結果だけ答えれば、最小MVPへ編集できます。</p></div></div>
+        <div class="step"><div><strong>起動確認</strong><p><code>npm run dev</code> でローカル起動し、フォーム入力からモック結果表示まで確認します。</p></div></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>コピペ用コマンド</h2>
+      <pre class="code"><code>cd template/next-ai-product-starter
+npm install
+claude
+# Claude Code内で /setup</code></pre>
+      <div class="callout">認識としては合っています。テンプレートを立ち上げた後は、毎回ファイルを個別ダウンロードしなくても、プロジェクト内の <code>/setup</code> を起点に進められる設計です。</div>
+    </section>
+
+    <section class="panel">
+      <h2>/setupがやること</h2>
+      <div class="grid">
+        <div class="mini"><strong>状態確認</strong><p>Node/npm、主要ファイル、依存関係を確認します。</p></div>
+        <div class="mini"><strong>3問ヒアリング</strong><p>作りたいサービスをMVPに落とし込むための最小質問だけします。</p></div>
+        <div class="mini"><strong>画面編集</strong><p>トップコピー、フォーム、モック結果をテーマに合わせます。</p></div>
+        <div class="mini"><strong>起動確認</strong><p>ローカルで見える状態まで確認し、次の改善案を3つ出します。</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>確認ポイント</h2>
+      <ul class="check">
+        <li>テンプレート内に <code>.claude/skills/setup/SKILL.md</code> がある</li>
+        <li>念のため <code>.claude/commands/setup.md</code> も入れている</li>
+        <li>GitHub Pagesからもsetup skillの中身を閲覧できる</li>
+        <li>ダウンロード前でも「何をするセットアップか」が分かる</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

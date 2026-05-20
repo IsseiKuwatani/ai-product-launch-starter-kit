@@ -4,30 +4,75 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI Webサービス制作スターターキット</title>
-  <meta name="description" content="AIプロダクト立ち上げラボ by ツギノメの無料キット。Claude Code/Codex導入マニュアル、開発プロンプト、skills/agents、企画ワークシート、制作テンプレートを配布。" />
+  <meta name="description" content="AIプロダクト立ち上げラボ by ツギノメの無料キット。Claude Code/Codex導入マニュアル、開発プロンプト、/setup対応skills、企画ワークシート、制作テンプレートを配布。" />
   <style>
-    :root{--navy:#062448;--green:#008f68;--mint:#e5fbf3;--bg:#f8fcfa;--text:#143044}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif;background:var(--bg);color:var(--text)}
-    .wrap{max-width:1080px;margin:auto;padding:32px 20px 64px}.badge{display:inline-block;background:var(--mint);color:var(--green);font-weight:800;border-radius:999px;padding:10px 16px}.hero{background:white;border:1px solid #cfeee4;border-radius:28px;padding:36px;box-shadow:0 10px 30px rgba(6,36,72,.06)}
-    h1{font-size:clamp(34px,6vw,64px);line-height:1.05;color:var(--navy);margin:18px 0}p{line-height:1.8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}.card{background:white;border:1px solid #d8eee6;border-radius:22px;padding:22px;text-decoration:none;color:inherit;box-shadow:0 6px 18px rgba(6,36,72,.04)}.card strong{display:block;color:var(--navy);font-size:20px;margin-bottom:8px}.num{color:var(--green);font-weight:900}.cta{display:inline-block;background:var(--green);color:white;text-decoration:none;border-radius:14px;padding:16px 22px;font-weight:900;margin-top:18px}.small{color:#64748b;font-size:14px}.hello{font-weight:900;color:var(--green)}
+    :root{--navy:#062448;--green:#008f68;--green2:#00a879;--mint:#e5fbf3;--bg:#f8fcfa;--text:#143044;--line:#cfeee4;--yellow:#fff6d8;--orange:#f59e0b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif;background:radial-gradient(circle at 88% 4%,#dcfff4 0,#dcfff400 32%),linear-gradient(180deg,#f8fcfa,#eefaf5 55%,#f8fcfa);color:var(--text)}
+    a{color:var(--green)}.wrap{max-width:1120px;margin:auto;padding:28px 20px 72px}.topbar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:1000;color:var(--navy)}.mark{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--green),#5de7bd);display:grid;place-items:center;color:#fff}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{font-weight:900;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 14px;color:var(--navy)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}.hero-copy,.hero-panel{background:#fff;border:1px solid var(--line);border-radius:32px;padding:34px;box-shadow:0 24px 60px rgba(6,36,72,.08);position:relative;overflow:hidden}.hero-copy:after{content:"START";position:absolute;right:-12px;bottom:-18px;font-size:96px;font-weight:1000;color:rgba(0,143,104,.06);letter-spacing:-.08em}.badge{display:inline-flex;gap:8px;align-items:center;background:var(--mint);color:var(--green);font-weight:1000;border-radius:999px;padding:10px 16px}.badge:before{content:"LINE登録特典";font-size:13px}.badge span{background:#fff;border-radius:999px;padding:3px 8px;color:var(--navy)}h1{font-size:clamp(36px,6vw,68px);line-height:1.04;color:var(--navy);letter-spacing:-.06em;margin:18px 0 16px}p{line-height:1.85}.lead{font-size:18px}.hello{font-weight:1000;color:var(--green);font-size:18px}.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:#fff;text-decoration:none;border-radius:16px;padding:16px 20px;font-weight:1000;box-shadow:0 12px 24px rgba(0,143,104,.24);transition:.18s transform,.18s box-shadow}.btn:hover{transform:translateY(-2px);box-shadow:0 18px 30px rgba(0,143,104,.28)}.btn.secondary{background:#fff;color:var(--green);border:2px solid var(--green);box-shadow:none}.btn:after{content:"→"}.small{color:#64748b;font-size:14px}.hero-panel{display:flex;flex-direction:column;gap:14px}.terminal{background:#071c34;color:#e5fbf3;border-radius:20px;padding:18px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.7;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}.terminal b{color:#7df0c7}.mini-step{display:flex;gap:12px;background:#fbfffd;border:1px solid #d8eee6;border-radius:18px;padding:14px}.mini-step strong{color:var(--navy)}.numchip{flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-weight:1000}
+    .section{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:0 14px 34px rgba(6,36,72,.05)}h2{font-size:32px;color:var(--navy);margin:0 0 10px;letter-spacing:-.04em}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;flex-wrap:wrap}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:16px;margin-top:20px}.card{position:relative;display:block;background:linear-gradient(180deg,#fff,#fbfffd);border:2px solid #d8eee6;border-radius:24px;padding:22px;text-decoration:none;color:inherit;box-shadow:0 8px 20px rgba(6,36,72,.05);transition:.18s transform,.18s border-color,.18s box-shadow}.card:hover{transform:translateY(-4px);border-color:var(--green);box-shadow:0 18px 34px rgba(6,36,72,.1)}.card:after{content:"クリックして開く";display:inline-flex;margin-top:14px;background:var(--green);color:#fff;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:1000}.card strong{display:block;color:var(--navy);font-size:20px;margin:6px 0 8px}.num{color:var(--green);font-weight:1000}.manual-links a{display:inline-flex;margin:6px 6px 0 0;background:var(--mint);border-radius:999px;padding:8px 10px;text-decoration:none;font-weight:900}.setup-card{border-color:#9cebd2;background:linear-gradient(135deg,#f5fffb,#fff)}.setup-card:before{content:"おすすめ";position:absolute;right:18px;top:18px;background:var(--yellow);border:1px solid #f6dc7a;border-radius:999px;padding:6px 10px;color:#936600;font-size:12px;font-weight:1000}.setup-card:after{content:"/setupを確認する"}.callout{background:var(--yellow);border:1px solid #f6dc7a;border-radius:22px;padding:18px;font-weight:900}.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:18px}.flow > div{background:#fbfffd;border:1px solid #d8eee6;border-radius:20px;padding:18px}.flow strong{display:block;color:var(--navy);margin-bottom:6px}.footer-cta{text-align:center;padding:34px}.footer-cta .btn{font-size:18px}.pill{display:inline-flex;background:var(--mint);color:var(--green);font-weight:1000;border-radius:999px;padding:8px 12px}.view-note{display:flex;gap:10px;align-items:flex-start;background:#f0f9ff;border:1px solid #bae6fd;border-radius:20px;padding:16px}.view-note b{color:#0369a1}@media(max-width:820px){.hero{grid-template-columns:1fr}.topbar{align-items:flex-start;flex-direction:column}.hero-copy,.hero-panel,.section{padding:22px}.nav a{font-size:13px}}
   </style>
 </head>
 <body>
   <main class="wrap">
+    <header class="topbar">
+      <div class="brand"><span class="mark">T</span><span>ツギノメ / AIプロダクト立ち上げラボ</span></div>
+      <nav class="nav"><a href="#kit">キットを見る</a><a href="#setup">/setup</a><a href="#flow">使い方</a></nav>
+    </header>
+
     <section class="hero">
-      <span class="badge">LINE登録特典</span>
-      <h1>AI Webサービス制作<br>スターターキット</h1>
-      <p class="hello" id="hello">ようこそ、AIプロダクト立ち上げラボへ</p>
-      <p>Claude Code / Codex を使って、非エンジニアでもAI Webサービスの最初の形を作り始めるための5点セットです。</p>
-      <a class="cta" href="https://timerex.net/s/tsuginome/da96046c">自分のテーマで相談する</a>
-      <p class="small">※ URLに <code>?name=お名前</code> が付いている場合は、ページ上部にお名前を表示します。LINEプロフィール連携はLIFF化で拡張予定です。</p>
+      <div class="hero-copy">
+        <span class="badge"><span>無料キット</span></span>
+        <h1>AI Webサービス制作<br>スターターキット</h1>
+        <p class="hello" id="hello">ようこそ、AIプロダクト立ち上げラボへ</p>
+        <p class="lead">Claude Code / Codex を使って、非エンジニアでもAI Webサービスの最初の形を作り始めるための実用セットです。マニュアルを見るだけでなく、テンプレート内の <strong>/setup</strong> から初期設定まで進められます。</p>
+        <div class="cta-row">
+          <a class="btn" href="#kit">キットを開く</a>
+          <a class="btn secondary" href="https://timerex.net/s/tsuginome/da96046c">自分のテーマで相談する</a>
+        </div>
+        <p class="small">※ URLに <code>?name=お名前</code> が付いている場合は、ページ上部にお名前を表示します。</p>
+      </div>
+      <aside class="hero-panel" id="setup">
+        <span class="pill">立ち上げ後の最短ルート</span>
+        <div class="terminal"><b>$</b> cd template/next-ai-product-starter<br><b>$</b> npm install<br><b>$</b> claude<br><b>Claude Code</b> /setup</div>
+        <div class="mini-step"><span class="numchip">1</span><div><strong>テンプレートを開く</strong><br>プロジェクト内にセットアップ用skillを同梱。</div></div>
+        <div class="mini-step"><span class="numchip">2</span><div><strong>/setupを実行</strong><br>サービス案に合わせて1画面MVPへ編集。</div></div>
+        <div class="mini-step"><span class="numchip">3</span><div><strong>ブラウザで確認</strong><br>フォーム入力→モック結果まで見える状態へ。</div></div>
+      </aside>
     </section>
-    <section class="grid">
-      <div class="card"><span class="num">01</span><strong>導入マニュアル</strong><p>Claude Code / Codexを使って開発を始めるためのHTML手順書。</p><p><a href="docs/manuals/claude-code-mac.html">Claude Code Mac版</a><br><a href="docs/manuals/claude-code-windows.html">Claude Code Windows版</a><br><a href="docs/manuals/codex-mac.html">Codex Mac版</a><br><a href="docs/manuals/codex-windows.html">Codex Windows版</a></p></div>
-      <a class="card" href="prompts/development-prompts.html"><span class="num">02</span><strong>開発プロンプト集</strong><p>MVP設計、画面設計、実装、デバッグに使えるコピペ文面。HTMLで見やすく表示。</p></a>
-      <a class="card" href="skills/03-skills-and-agents.md"><span class="num">03</span><strong>skills・エージェント</strong><p>PM、エンジニア、UXライター、レビュー担当をAIに任せる設計集。</p></a>
-      <a class="card" href="docs/04-product-planning-worksheet.md"><span class="num">04</span><strong>企画ワークシート</strong><p>サービス案を要件定義に変換する記入式シート。</p></a>
-      <a class="card" href="template/next-ai-product-starter/"><span class="num">05</span><strong>制作テンプレート</strong><p>Next.jsでAI WebサービスMVPを作るためのスターター。</p></a>
+
+    <section class="section" id="kit">
+      <div class="section-head">
+        <div><h2>受け取りキット</h2><p>各カードは押せるリンクです。見たい資料をクリックして開けます。</p></div>
+        <span class="pill">全てブラウザで閲覧可能</span>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="num">01</span><strong>導入マニュアル</strong><p>Claude Code / Codexを使って開発を始めるためのHTML手順書。</p><div class="manual-links"><a href="docs/manuals/claude-code-mac.html">Claude Code Mac</a><a href="docs/manuals/claude-code-windows.html">Windows</a><a href="docs/manuals/codex-mac.html">Codex Mac</a><a href="docs/manuals/codex-windows.html">Codex Windows</a></div></div>
+        <a class="card" href="prompts/development-prompts.html"><span class="num">02</span><strong>開発プロンプト集</strong><p>MVP設計、画面設計、実装、デバッグに使えるコピペ文面。HTMLで見やすく表示。</p></a>
+        <a class="card setup-card" href="docs/manuals/setup-skill.html"><span class="num">03</span><strong>/setup対応 skill</strong><p>テンプレート起動後、Claude Codeで <code>/setup</code> から初期セットアップできる手順。</p></a>
+        <a class="card" href="skills/03-skills-and-agents.md"><span class="num">04</span><strong>skills・エージェント設計集</strong><p>PM、エンジニア、UXライター、レビュー担当をAIに任せる設計集。</p></a>
+        <a class="card" href="docs/04-product-planning-worksheet.md"><span class="num">05</span><strong>企画ワークシート</strong><p>サービス案を要件定義に変換する記入式シート。</p></a>
+        <a class="card" href="template/next-ai-product-starter/"><span class="num">06</span><strong>制作テンプレート</strong><p>Next.jsでAI WebサービスMVPを作るためのスターター。中に <code>.claude/skills/setup</code> を同梱。</p></a>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <h2>「ダウンロードして終わり」ではなく、立ち上げまで進める設計</h2>
+      <div class="callout">認識としては、テンプレートを立ち上げた後は <strong>Claude Code内で /setup を実行</strong> すれば、別途資料を毎回ダウンロードしなくても進められる形です。資料はこのページから確認用に見られるように残しています。</div>
+      <div class="flow">
+        <div><strong>1. まず見る</strong><p>マニュアル・プロンプト・ワークシートをブラウザで確認。</p></div>
+        <div><strong>2. テンプレを開く</strong><p>Next.jsスターターを自分のPC/リポジトリで開く。</p></div>
+        <div><strong>3. /setup</strong><p>Claude Codeが質問しながら1画面MVPに整える。</p></div>
+        <div><strong>4. 相談へ</strong><p>詰まったら自分のテーマで個別相談へ進む。</p></div>
+      </div>
+    </section>
+
+    <section class="section footer-cta">
+      <div class="view-note"><b>補足:</b><span>GitHub Pages上では閲覧用ページ <code>skills/setup/</code> から中身を確認できます。実行時はテンプレートをClaude Codeで開いて <code>/setup</code> を入力してください。</span></div>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn" href="docs/manuals/setup-skill.html">/setupの中身を見る</a>
+        <a class="btn secondary" href="https://timerex.net/s/tsuginome/da96046c">8週間で作れるか相談する</a>
+      </div>
     </section>
   </main>
   <script>

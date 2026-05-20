@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>setup skill | AI Webサービス制作スターターキット</title>
+  <style>
+    :root{--navy:#062448;--green:#008f68;--mint:#e5fbf3;--bg:#f8fcfa;--text:#143044;--line:#cfeee4}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:900px;margin:auto;padding:28px 18px 72px}.card{background:white;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 18px 44px rgba(6,36,72,.07)}a{color:var(--green);font-weight:900}h1{font-size:clamp(32px,6vw,56px);line-height:1.08;color:var(--navy);letter-spacing:-.05em}h2{color:var(--navy);margin-top:34px}.badge{display:inline-block;background:var(--mint);color:var(--green);border-radius:999px;padding:9px 14px;font-weight:1000}p,li{line-height:1.85}pre{background:#071c34;color:#e5fbf3;border-radius:16px;padding:18px;overflow:auto}.note{background:#fff6d8;border:1px solid #f6dc7a;border-radius:18px;padding:16px;font-weight:800}.back{margin-bottom:18px}.check li::marker{color:var(--green)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="back"><a href="../../docs/manuals/setup-skill.html">← /setup説明ページへ</a></div>
+    <article class="card">
+      <span class="badge">閲覧用コピー</span>
+      <h1>Setup Skill — Next.js AI Product Starter</h1>
+      <p class="note">実際にClaude Codeから使う本体は <code>template/next-ai-product-starter/.claude/skills/setup/SKILL.md</code> に入っています。このページはブラウザ確認用です。</p>
+      <h2>使う場面</h2>
+      <p>ユーザーがテンプレートをClaude Codeで開き、<code>/setup</code> または「セットアップして」と依頼したときに使います。目的は、テンプレートをその場で起動し、事業アイデアに合わせて最小MVPへ整えることです。</p>
+      <h2>1. 現在状態の確認</h2>
+      <pre><code>pwd
+ls
+node -v
+npm -v</code></pre>
+      <p>主要ファイルとして <code>package.json</code>、<code>app/page.tsx</code>、<code>components/ProductForm.tsx</code>、<code>app/globals.css</code>、<code>README.md</code> を確認します。</p>
+      <h2>2. 依存関係のインストール</h2>
+      <pre><code>npm install</code></pre>
+      <h2>3. ユーザーに3つだけ質問する</h2>
+      <ol>
+        <li>作りたいサービス名は何ですか？</li>
+        <li>誰のどんな課題を解決しますか？</li>
+        <li>ユーザーに何を入力してもらい、どんな結果を返したいですか？</li>
+      </ol>
+      <h2>4. 1画面MVPへ編集する</h2>
+      <ul>
+        <li><code>app/page.tsx</code>: ヒーローコピー、説明文、CTA、利用ステップ</li>
+        <li><code>components/ProductForm.tsx</code>: 入力項目、ボタン文言、モック結果</li>
+        <li><code>app/globals.css</code>: 必要に応じて色・余白・スマホ表示</li>
+      </ul>
+      <p>1回目はAI API接続まで広げすぎず、まずモック結果で「体験」が伝わる状態にします。APIキーや秘密情報はコードに直書きしません。</p>
+      <h2>5. 起動して確認する</h2>
+      <pre><code>npm run dev</code></pre>
+      <ul class="check">
+        <li><code>http://localhost:3000</code> が開く</li>
+        <li>スマホ幅でも崩れない</li>
+        <li>フォーム入力 → 結果表示まで動く</li>
+        <li>CTA文言が具体的</li>
+      </ul>
+      <h2>6. 次の改善案を3つだけ出す</h2>
+      <ol>
+        <li>AI APIを接続して本物の結果生成にする</li>
+        <li>相談・予約・LINE登録などの導線を追加する</li>
+        <li>利用者の入力内容を保存するDBを追加する</li>
+      </ol>
+    </article>
+  </main>
+</body>
+</html>
