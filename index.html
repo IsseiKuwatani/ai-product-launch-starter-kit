@@ -26,8 +26,8 @@
         <p class="hello" id="hello">ようこそ、AIプロダクト立ち上げラボへ</p>
         <p class="lead">Claude Code / Codex を使って、非エンジニアでもAI Webサービスの最初の形を作り始めるための実用セットです。まずは自分のPCで動く簡単なサービスを作り、必要に応じて機能を広げていきます。</p>
         <div class="cta-row">
-          <a class="btn" href="#kit">受け取りキットを見る</a>
-          <a class="btn secondary" href="#choose">最初の選び方を見る</a>
+          <a class="btn" href="downloads/ai-product-launch-starter-kit.zip" download>一式をダウンロード</a>
+          <a class="btn secondary" href="#kit">中身を見る</a>
         </div>
         <details class="help-toggle">
           <summary aria-label="困った時のヘルプを開く"><span class="help-icon">?</span><span class="help-label">ヘルプ</span></summary>
@@ -38,25 +38,26 @@
       </div>
       <aside class="hero-panel" id="setup">
         <span class="pill">立ち上げ後の最短ルート</span>
-        <div class="terminal"><b>$</b> cd template/next-ai-product-starter<br><b>$</b> npm install<br><b>$</b> claude<br><b>Claude Code</b> /setup</div>
-        <div class="mini-step"><span class="numchip">1</span><div><strong>テンプレートを開く</strong><br>プロジェクト内にセットアップ用skillを同梱。</div></div>
-        <div class="mini-step"><span class="numchip">2</span><div><strong>/setupを実行</strong><br>Claude Codeなら質問に答えながら1画面MVPへ。</div></div>
-        <div class="mini-step"><span class="numchip">3</span><div><strong>Codexならファイルを渡す</strong><br>ヘルプやプロンプト集のファイルリンク/パスを渡せば同じ流れで進められます。</div></div>
+        <div class="terminal"><b>$</b> ダウンロードしたZIPを展開<br><b>$</b> cd ai-product-launch-starter-kit/template/next-ai-product-starter<br><b>$</b> npm install<br><b>$</b> claude<br><b>Claude Code</b> /setup</div>
+        <div class="mini-step"><span class="numchip">1</span><div><strong>一式をダウンロード</strong><br>ZIPを展開して、作業しやすいディレクトリに置きます。</div></div>
+        <div class="mini-step"><span class="numchip">2</span><div><strong>テンプレートを開く</strong><br><code>template/next-ai-product-starter</code> をVS Codeなどで開きます。</div></div>
+        <div class="mini-step"><span class="numchip">3</span><div><strong>/setup またはプロンプト集で開始</strong><br>Claude Codeなら <code>/setup</code>、Codexならヘルプ/プロンプト集を渡して進めます。</div></div>
       </aside>
     </section>
 
     <section class="section" id="kit">
       <div class="section-head">
-        <div><h2>受け取りキット</h2><p>最初にここから必要なものを開いてください。OSロゴを目印に、自分のPCに合うマニュアルを選べます。</p></div>
-        <span class="pill">全てブラウザで閲覧可能</span>
+        <div><h2>受け取りキット</h2><p>まずは一式をダウンロードして、作業用ディレクトリに置いてください。ブラウザで中身を確認することもできます。</p></div>
+        <span class="pill">ZIPで一式ダウンロード可</span>
       </div>
       <div class="resource-list">
-        <div class="resource-row"><span class="num">01</span><div><strong>導入マニュアル</strong><p>Claude Code / Codexを使って開発を始めるためのHTML手順書。</p><div class="manual-links"><a href="docs/manuals/claude-code-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Claude Code Mac</a><a href="docs/manuals/claude-code-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Claude Code Windows</a><a href="docs/manuals/codex-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Codex Mac</a><a href="docs/manuals/codex-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Codex Windows</a></div></div></div>
-        <div class="resource-row"><span class="num">02</span><div><strong>開発プロンプト集 順番に貼る版</strong><p>Codexの人は、このページのリンク/ファイルパスを渡して進められます。一歩ずつ確認したい人にもおすすめ。</p><a class="text-link" href="prompts/development-prompts.html">プロンプト集を開く</a></div></div>
-        <div class="resource-row"><span class="num">03</span><div><strong>/setup対応 skill</strong><p>Claude Code向け。テンプレート起動後、<code>/setup</code> から初期セットアップできます。</p><a class="text-link" href="docs/manuals/setup-skill.html">/setupを確認する</a></div></div>
-        <div class="resource-row"><span class="num">04</span><div><strong>ヘルプFAQ</strong><p>「どちらがいいの？」「/setupとプロンプト集の違いは？」に答えるヘルプページ。</p><a class="text-link" href="docs/help.html">？ ヘルプFAQを開く</a></div></div>
-        <div class="resource-row"><span class="num">05</span><div><strong>企画ワークシート</strong><p>サービス案を要件定義に変換する記入式シート。</p><a class="text-link" href="docs/04-product-planning-worksheet.md">ワークシートを開く</a></div></div>
-        <div class="resource-row"><span class="num">06</span><div><strong>制作テンプレート</strong><p>Next.jsでAI WebサービスMVPを作るためのスターター。</p><a class="text-link" href="template/next-ai-product-starter/">テンプレートを開く</a></div></div>
+        <div class="resource-row"><span class="num">01</span><div><strong>スターターキット一式</strong><p>導入マニュアル、プロンプト集、/setup skill、制作テンプレートをまとめたZIPです。まずこれをダウンロードして展開してください。</p><a class="btn" href="downloads/ai-product-launch-starter-kit.zip" download>一式をダウンロード</a></div></div>
+        <div class="resource-row"><span class="num">02</span><div><strong>導入マニュアル</strong><p>Claude Code / Codexを使って開発を始めるためのHTML手順書。</p><div class="manual-links"><a href="docs/manuals/claude-code-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Claude Code Mac</a><a href="docs/manuals/claude-code-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Claude Code Windows</a><a href="docs/manuals/codex-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Codex Mac</a><a href="docs/manuals/codex-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Codex Windows</a></div></div></div>
+        <div class="resource-row"><span class="num">03</span><div><strong>開発プロンプト集 順番に貼る版</strong><p>Codexの人は、このページのリンク/ファイルパスを渡して進められます。一歩ずつ確認したい人にもおすすめ。</p><a class="text-link" href="prompts/development-prompts.html">プロンプト集を開く</a></div></div>
+        <div class="resource-row"><span class="num">04</span><div><strong>/setup対応 skill</strong><p>Claude Code向け。テンプレート起動後、<code>/setup</code> から初期セットアップできます。</p><a class="text-link" href="docs/manuals/setup-skill.html">/setupを確認する</a></div></div>
+        <div class="resource-row"><span class="num">05</span><div><strong>ヘルプFAQ</strong><p>「どちらがいいの？」「/setupとプロンプト集の違いは？」に答えるヘルプページ。</p><a class="text-link" href="docs/help.html">？ ヘルプFAQを開く</a></div></div>
+        <div class="resource-row"><span class="num">06</span><div><strong>企画ワークシート</strong><p>サービス案を要件定義に変換する記入式シート。</p><a class="text-link" href="docs/04-product-planning-worksheet.md">ワークシートを開く</a></div></div>
+        <div class="resource-row"><span class="num">07</span><div><strong>制作テンプレート</strong><p>Next.jsでAI WebサービスMVPを作るためのスターター。</p><a class="text-link" href="template/next-ai-product-starter/">テンプレートを開く</a></div></div>
       </div>
     </section>
 
@@ -85,19 +86,20 @@
 
     <section class="section" id="flow">
       <h2>「ダウンロードして終わり」ではなく、立ち上げまで進める設計</h2>
-      <div class="callout">テンプレートを開いた後は、Claude Codeなら <strong>/setup</strong>。Codexなら <strong>ヘルプ/プロンプト集のファイルリンクを渡して</strong> 進めてください。どちらも最初のゴールは「自分のPCで動く1画面MVP」です。</div>
+      <div class="callout">まずZIPをダウンロードして展開し、作業用ディレクトリに置いてください。その後、Claude Codeなら <strong>/setup</strong>。Codexなら <strong>ヘルプ/プロンプト集のファイルリンクを渡して</strong> 進めます。</div>
       <div class="flow-list">
-        <div class="flow-row"><span class="num">1</span><div><strong>AIを選ぶ</strong><p>今契約しているAIでOK。ClaudeならClaude Code、ChatGPT/OpenAIならCodex。</p></div></div>
-        <div class="flow-row"><span class="num">2</span><div><strong>OSを選ぶ</strong><p><img class="logo" src="assets/logos/apple.svg" alt="Mac"> Mac / <img class="logo" src="assets/logos/windows.svg" alt="Windows"> Windows の自分のPCに合う手順を見る。</p></div></div>
-        <div class="flow-row"><span class="num">3</span><div><strong>テンプレを開く</strong><p>Next.jsスターターを自分のPC/リポジトリで開く。</p></div></div>
+        <div class="flow-row"><span class="num">1</span><div><strong>一式をダウンロード</strong><p>ZIPを展開して、デスクトップや作業用フォルダなど分かりやすい場所に置く。</p></div></div>
+        <div class="flow-row"><span class="num">2</span><div><strong>AIとOSの手順を見る</strong><p>ClaudeならClaude Code、ChatGPT/OpenAIならCodex。<img class="logo" src="assets/logos/apple.svg" alt="Mac"> Mac / <img class="logo" src="assets/logos/windows.svg" alt="Windows"> Windows の自分のPCに合う手順を確認。</p></div></div>
+        <div class="flow-row"><span class="num">3</span><div><strong>テンプレを開く</strong><p><code>template/next-ai-product-starter</code> をVS Codeなどで開く。</p></div></div>
         <div class="flow-row"><span class="num">4</span><div><strong>MVP化</strong><p>/setup、またはファイルリンクを渡したプロンプト集で、1画面MVPへ整える。</p></div></div>
       </div>
     </section>
 
     <section class="section footer-cta">
-      <div class="view-note"><b>補足:</b><span>GitHub Pages上では資料を閲覧できます。実際に使うときはテンプレートを自分のPC/リポジトリで開いてください。</span></div>
+      <div class="view-note"><b>補足:</b><span>GitHub Pages上では資料を閲覧できます。実際に使うときはZIPをダウンロードして展開し、作業用ディレクトリに置いてください。</span></div>
       <div class="cta-row" style="justify-content:center">
-        <a class="btn" href="docs/help.html">ヘルプFAQを見る</a>
+        <a class="btn" href="downloads/ai-product-launch-starter-kit.zip" download>一式をダウンロード</a>
+        <a class="btn secondary" href="docs/help.html">ヘルプFAQを見る</a>
         <a class="btn secondary" href="docs/manuals/setup-skill.html">/setupの中身を見る</a>
         <a class="btn secondary" href="https://timerex.net/s/tsuginome/da96046c">8週間で作れるか相談する</a>
       </div>
