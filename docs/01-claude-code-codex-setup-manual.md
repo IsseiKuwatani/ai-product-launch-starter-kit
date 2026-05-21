@@ -43,9 +43,9 @@ Claude Code / Codex は、あなたの代わりにコードを書く「開発パ
    - 例: `ai-booking-assistant`
 
 
-## CLI認証は必ず行う
+## Claude Code / Codexへのログインは必ず行う
 
-Claude Code / Codex は、インストールしただけでは使えません。最初にCLIでログインし、認証状態を確認してください。
+Claude Code / Codex は、インストールしただけでは使えません。最初にログインし、使える状態か確認してください。
 
 ### Claude Code の認証
 
@@ -78,9 +78,19 @@ codex login status
 
 OpenAI APIキーで使う場合は、キーをチャットやGitHubに貼らず、ターミナルから渡します。
 
+Macの場合:
+
 ```bash
 export OPENAI_API_KEY="sk-..."
 printenv OPENAI_API_KEY | codex login --with-api-key
+codex login status
+```
+
+Windows PowerShellの場合:
+
+```powershell
+$env:OPENAI_API_KEY="sk-..."
+$env:OPENAI_API_KEY | codex login --with-api-key
 codex login status
 ```
 
