@@ -33,6 +33,18 @@ claude
 # Claude Code内で /setup
 ```
 
+## Codexで進める場合
+
+Codexでも、このフォルダ内のファイルを読ませれば同じ方針で進められます。
+最初に以下のように依頼してください。
+
+```text
+このフォルダでAI WebサービスのMVPを作ります。
+../docs/help.html と ../prompts/02-development-prompts.md を読んで、まず1画面MVPを作る手順で進めてください。
+必要なら .claude/skills/setup/SKILL.md も参考にしてください。
+いきなり大きく作らず、入力フォームと結果表示までを小さく作ってください。
+```
+
 ## 次にやること
 
 1. トップページのコピーを自分のサービス向けに変更

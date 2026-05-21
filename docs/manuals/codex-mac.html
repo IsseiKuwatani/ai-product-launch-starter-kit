@@ -10,8 +10,9 @@
 <section id="auth"><h2>4. 初回起動と認証</h2><pre><code>codex</code></pre><p>初回起動時にログインや認証の案内が出た場合は、画面に従ってOpenAI / ChatGPTアカウントでログインします。環境によってはAPIキー設定が必要になる場合があります。</p><div class="note danger"><strong>注意：</strong>APIキーをチャットやコードに直接貼らないでください。必要な場合は、ツールの案内に従ってローカル環境変数や認証ファイルで管理します。</div></section>
 <section id="basic"><h2>5. 基本操作</h2><table class="table"><tr><th>操作</th><th>コマンド</th></tr><tr><td>起動</td><td><code>codex</code></td></tr><tr><td>1回だけ依頼して実行</td><td><code>codex exec "トップページを改善してください"</code></td></tr><tr><td>作業フォルダで使う</td><td><code>cd ~/Desktop/project-name</code> → <code>codex</code></td></tr><tr><td>バージョン確認</td><td><code>codex --version</code></td></tr></table><p>CodexはGitリポジトリ内で使うと変更差分を管理しやすくなります。最初にGitHubテンプレートを複製して使うのがおすすめです。</p></section>
 <section id="firstprompt"><h2>6. 最初のプロンプト例</h2><div class="prompt">このフォルダでAI WebサービスのMVPを作ります。
-まず現在のファイル構成を確認し、どの順番で実装すべきか提案してください。
-いきなり大きく作らず、トップページ、入力フォーム、結果表示の順に小さく進めてください。</div></section>
+docs/help.html と prompts/02-development-prompts.md を読んで、まず1画面MVPを作る手順で進めてください。
+必要なら skills/setup/SKILL.md も参考にしてください。
+いきなり大きく作らず、トップページ、入力フォーム、結果表示の順に小さく進めてください。</div><div class="note ok"><strong>ポイント：</strong>Codexはファイルを読めるので、ヘルプページやプロンプト集のリンク/ファイルパスを渡すと、その手順に沿って進めやすくなります。</div></section>
 <section id="usecases"><h2>7. 使いどころ</h2><ul><li>Next.jsテンプレートの初期改修</li><li>LPコピーと画面改善</li><li>フォームや結果ページの実装</li><li>READMEや仕様書の整備</li><li>エラー調査と修正</li></ul></section>
 <section id="trouble"><h2>8. トラブルシューティング</h2><h3><code>codex</code> が見つからない</h3><p>ターミナルを開き直してから確認します。</p><pre><code>codex --version</code></pre><h3>npmで失敗する</h3><p>Node.js/npmの導入状態を確認します。</p><pre><code>node --version
 npm --version</code></pre><h3>認証で止まる</h3><p>画面のログイン案内を確認し、必要に応じてOpenAI / ChatGPTアカウントまたはAPIキーの設定を行います。</p></section></div></body></html>

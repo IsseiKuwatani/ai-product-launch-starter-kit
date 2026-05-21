@@ -13,7 +13,8 @@ codex --version</code></pre><p>Claude Codeと同様、慣れるまでは <code>~
 <section id="auth"><h2>5. 初回起動と認証</h2><pre><code>codex</code></pre><p>初回起動時にログインや認証の案内が出た場合は、画面に従ってOpenAI / ChatGPTアカウントでログインします。</p><div class="note danger"><strong>注意：</strong>APIキーをチャット、GitHub、ソースコードに直接貼らないでください。</div></section>
 <section id="basic"><h2>6. 基本操作</h2><table class="table"><tr><th>操作</th><th>コマンド</th></tr><tr><td>起動</td><td><code>codex</code></td></tr><tr><td>1回だけ依頼して実行</td><td><code>codex exec "READMEを整理してください"</code></td></tr><tr><td>作業フォルダで使う</td><td><code>cd project-name</code> → <code>codex</code></td></tr><tr><td>確認</td><td><code>codex --version</code></td></tr></table></section>
 <section id="firstprompt"><h2>7. 最初のプロンプト例</h2><div class="prompt">このフォルダでAI WebサービスのMVPを作ります。
-まず現在の構成を確認し、実装順序を提案してください。
-作業は小さく区切り、変更後の確認方法も教えてください。</div></section>
+docs/help.html と prompts/02-development-prompts.md を読んで、まず1画面MVPを作る手順で進めてください。
+必要なら skills/setup/SKILL.md も参考にしてください。
+作業は小さく区切り、変更後の確認方法も教えてください。</div><div class="note ok"><strong>ポイント：</strong>Codexはファイルを読めるので、ヘルプページやプロンプト集のリンク/ファイルパスを渡すと、その手順に沿って進めやすくなります。</div></section>
 <section id="trouble"><h2>8. トラブルシューティング</h2><h3><code>codex</code> が見つからない</h3><p>PowerShellまたはUbuntuを開き直して確認します。</p><pre><code>codex --version</code></pre><h3>npm installで失敗する</h3><pre><code>node --version
 npm --version</code></pre><p>Node.jsを入れ直したあと、PowerShellを開き直します。</p><h3>パスや権限で詰まる</h3><p>Windows側の深いフォルダではなく、WSL2の <code>~/projects</code> 配下で試すと切り分けしやすいです。</p></section></div></body></html>

@@ -34,7 +34,7 @@
         <div class="terminal"><b>$</b> cd template/next-ai-product-starter<br><b>$</b> npm install<br><b>$</b> claude<br><b>Claude Code</b> /setup</div>
         <div class="mini-step"><span class="numchip">1</span><div><strong>テンプレートを開く</strong><br>プロジェクト内にセットアップ用skillを同梱。</div></div>
         <div class="mini-step"><span class="numchip">2</span><div><strong>/setupを実行</strong><br>Claude Codeなら質問に答えながら1画面MVPへ。</div></div>
-        <div class="mini-step"><span class="numchip">3</span><div><strong>Codexならプロンプト集</strong><br>Step 0から順番に貼って同じ流れで進めます。</div></div>
+        <div class="mini-step"><span class="numchip">3</span><div><strong>Codexならファイルを渡す</strong><br>ヘルプやプロンプト集のファイルリンク/パスを渡せば同じ流れで進められます。</div></div>
       </aside>
     </section>
 
@@ -45,7 +45,7 @@
       </div>
       <div class="compare">
         <div class="route-card"><div class="label">Claudeを契約中</div><h3>Claude Codeがおすすめ</h3><p>テンプレートを開いたあと、<code>/setup</code> から初回セットアップを進めやすいです。</p><a class="btn" href="docs/manuals/claude-code-mac.html">Mac版を見る</a> <a class="btn secondary" href="docs/manuals/claude-code-windows.html">Windows版を見る</a></div>
-        <div class="route-card"><div class="label">ChatGPT / OpenAIを契約中</div><h3>Codexがおすすめ</h3><p><code>/setup</code> ではなく、プロンプト集をStep 0から順番に貼って進めます。</p><a class="btn" href="docs/manuals/codex-mac.html">Mac版を見る</a> <a class="btn secondary" href="docs/manuals/codex-windows.html">Windows版を見る</a></div>
+        <div class="route-card"><div class="label">ChatGPT / OpenAIを契約中</div><h3>Codexがおすすめ</h3><p>Codexには、ヘルプページやプロンプト集のリンク/ファイルパスを渡して「この手順で進めて」と頼むのが分かりやすいです。</p><a class="btn" href="docs/manuals/codex-mac.html">Mac版を見る</a> <a class="btn secondary" href="docs/manuals/codex-windows.html">Windows版を見る</a></div>
       </div>
     </section>
 
@@ -55,7 +55,7 @@
         <div class="route-card"><div class="label">プロンプト集</div><h3>順番に貼る「台本」</h3><p>Claude Code / Codexどちらでも使えます。Step 0から順番に貼り、作業を一つずつ確認しながら進めたい人向けです。</p></div>
         <div class="route-card"><div class="label">/setup skill</div><h3>Claude Code向けの「初回案内係」</h3><p>テンプレート内のファイルを確認し、質問に答えながら最初の1画面MVPへ整える入口です。</p></div>
       </div>
-      <div class="callout">迷ったら、Claude Codeの人は <code>/setup</code>。Codexの人は「開発プロンプト集 順番に貼る版」。やることのゴールは同じです。</div>
+      <div class="callout">迷ったら、Claude Codeの人は <code>/setup</code>。Codexの人はヘルプ/プロンプト集のファイルリンクを渡して「この手順で進めて」と依頼。やることのゴールは同じです。</div>
     </section>
 
     <section class="section" id="kit">
@@ -65,7 +65,7 @@
       </div>
       <div class="grid">
         <div class="card"><span class="num">01</span><strong>導入マニュアル</strong><p>Claude Code / Codexを使って開発を始めるためのHTML手順書。</p><div class="manual-links"><a href="docs/manuals/claude-code-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Claude Code Mac</a><a href="docs/manuals/claude-code-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Claude Code Windows</a><a href="docs/manuals/codex-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Codex Mac</a><a href="docs/manuals/codex-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Codex Windows</a></div></div>
-        <a class="card" href="prompts/development-prompts.html"><span class="num">02</span><strong>開発プロンプト集 順番に貼る版</strong><p>Codexの人、または一歩ずつ確認したい人向け。上から順番に貼って進めます。</p></a>
+        <a class="card" href="prompts/development-prompts.html"><span class="num">02</span><strong>開発プロンプト集 順番に貼る版</strong><p>Codexの人は、このページのリンク/ファイルパスを渡して進められます。一歩ずつ確認したい人にもおすすめ。</p></a>
         <a class="card setup-card" href="docs/manuals/setup-skill.html"><span class="num">03</span><strong>/setup対応 skill</strong><p>Claude Code向け。テンプレート起動後、<code>/setup</code> から初期セットアップできます。</p></a>
         <a class="card" href="docs/help.html"><span class="num">04</span><strong>ヘルプFAQ</strong><p>「どちらがいいの？」「/setupとプロンプト集の違いは？」に答えるヘルプページ。</p></a>
         <a class="card" href="docs/04-product-planning-worksheet.md"><span class="num">05</span><strong>企画ワークシート</strong><p>サービス案を要件定義に変換する記入式シート。</p></a>
@@ -75,12 +75,12 @@
 
     <section class="section" id="flow">
       <h2>「ダウンロードして終わり」ではなく、立ち上げまで進める設計</h2>
-      <div class="callout">テンプレートを開いた後は、Claude Codeなら <strong>/setup</strong>、Codexなら <strong>プロンプト集 Step 0</strong> から進めてください。どちらも最初のゴールは「自分のPCで動く1画面MVP」です。</div>
+      <div class="callout">テンプレートを開いた後は、Claude Codeなら <strong>/setup</strong>。Codexなら <strong>ヘルプ/プロンプト集のファイルリンクを渡して</strong> 進めてください。どちらも最初のゴールは「自分のPCで動く1画面MVP」です。</div>
       <div class="flow">
         <div><strong>1. AIを選ぶ</strong><p>今契約しているAIでOK。ClaudeならClaude Code、ChatGPT/OpenAIならCodex。</p></div>
         <div><strong>2. OSを選ぶ</strong><p><img class="logo" src="assets/logos/apple.svg" alt="Mac"> Mac / <img class="logo" src="assets/logos/windows.svg" alt="Windows"> Windows の自分のPCに合う手順を見る。</p></div>
         <div><strong>3. テンプレを開く</strong><p>Next.jsスターターを自分のPC/リポジトリで開く。</p></div>
-        <div><strong>4. MVP化</strong><p>/setup またはプロンプト集で、1画面MVPへ整える。</p></div>
+        <div><strong>4. MVP化</strong><p>/setup、またはファイルリンクを渡したプロンプト集で、1画面MVPへ整える。</p></div>
       </div>
     </section>
 

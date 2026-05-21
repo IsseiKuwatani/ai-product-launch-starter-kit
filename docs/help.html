@@ -36,7 +36,7 @@
         <tr><td>一言でいうと</td><td>順番にコピーしてAIに貼る「台本」</td><td>Claude Code向けの「初回案内係」</td></tr>
         <tr><td>使う場所</td><td>Claude Code / Codex などの入力欄</td><td>Claude Codeでテンプレートを開いた後の入力欄</td></tr>
         <tr><td>向いている人</td><td>中身を見ながら、自分のペースで進めたい人</td><td>最初の1画面MVPまで迷わず進めたい人</td></tr>
-        <tr><td>Codexの場合</td><td>こちらをStep 0から使う</td><td>基本的には使わず、プロンプト集で代替する</td></tr>
+        <tr><td>Codexの場合</td><td>ページURLやファイルパスを渡して「この手順で進めて」と頼む</td><td>slashとして実行できなくても、setup説明ページやskillファイルを読ませて同じ方針で進められる</td></tr>
       </table>
     </section>
 
@@ -44,7 +44,19 @@
       <h2>おすすめルート</h2>
       <div class="route">
         <div class="card"><strong>Claude Codeルート</strong><p>導入マニュアル → テンプレートを開く → <code>/setup</code> → ブラウザ確認 → 必要に応じてプロンプト集</p></div>
-        <div class="card"><strong>Codexルート</strong><p>導入マニュアル → テンプレートを開く → プロンプト集 Step 0 → ブラウザ確認 → 必要に応じて保存/AI機能</p></div>
+        <div class="card"><strong>Codexルート</strong><p>導入マニュアル → テンプレートを開く → ヘルプ/プロンプト集のリンクやファイルパスをCodexに渡す → ブラウザ確認 → 必要に応じて保存/AI機能</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Codexに最初に渡す文</h2>
+      <div class="answer">
+        <p>Codexでテンプレートを開いたら、まず以下のように依頼してください。</p>
+        <pre><code>このフォルダでAI WebサービスのMVPを作ります。
+docs/help.html と prompts/02-development-prompts.md を読んで、
+まず1画面MVPを作る手順で進めてください。
+必要なら skills/setup/SKILL.md も参考にしてください。
+いきなり大きく作らず、入力フォームと結果表示までを小さく作ってください。</code></pre>
       </div>
     </section>
 
@@ -53,7 +65,7 @@
       <div class="question"><h3>Q. Claude CodeとCodexはどちらがいいですか？</h3><div class="answer">A. 原則は <strong>今契約しているAIでやる方がいい</strong> です。Claudeを契約中ならClaude Code、ChatGPT / OpenAIを契約中ならCodex。両方を新しく契約する必要はありません。</div></div>
       <div class="question"><h3>Q. 最初に見るのはプロンプト集ですか？ <code>/setup</code> ですか？</h3><div class="answer">A. Claude Codeで進めるなら、最初は <code>/setup</code> がおすすめです。Codexで進める、または手順を見ながら自分で調整したい場合はプロンプト集を上から貼ってください。</div></div>
       <div class="question"><h3>Q. プロンプト集と <code>/setup</code> は両方やる必要がありますか？</h3><div class="answer">A. 必須ではありません。<code>/setup</code> で最初の形を作り、その後の改善でプロンプト集を使う、という順番が分かりやすいです。</div></div>
-      <div class="question"><h3>Q. <code>/setup</code> はCodexでも使えますか？</h3><div class="answer">A. このキットの <code>/setup</code> はClaude Code向けです。Codexでは、プロンプト集のStep 0から順番に貼って進めてください。</div></div>
+      <div class="question"><h3>Q. <code>/setup</code> やヘルプはCodexでも使えますか？</h3><div class="answer">A. はい、考え方としては使えます。Claude Codeのように <code>/setup</code> slashとして動かない場合でも、Codexに <code>docs/help.html</code> や <code>prompts/02-development-prompts.md</code>、<code>skills/setup/SKILL.md</code> のファイルパスを渡して「この手順を読んで進めて」と頼めばOKです。</div></div>
       <div class="question"><h3>Q. MacとWindowsのどちらのマニュアルを見ればいいですか？</h3><div class="answer">A. 自分のPCに合わせます。<span class="chip"><img class="logo" src="../assets/logos/apple.svg" alt="Macロゴ">Mac</span>ならMac版、<span class="chip"><img class="logo" src="../assets/logos/windows.svg" alt="Windowsロゴ">Windows</span>ならWindows版です。</div></div>
       <div class="question"><h3>Q. ターミナルやコマンドが怖いです。</h3><div class="answer">A. コピーして貼るだけの行を使います。意味が不安なときは、AIに「今から実行するコマンドの意味を1行で説明して」と聞いてから実行してください。</div></div>
       <div class="question"><h3>Q. AI APIキーは最初から必要ですか？</h3><div class="answer">A. 不要です。最初はAI接続なしのモック結果で体験を確認します。「入力する → 結果が出る」流れができてから、必要な場合だけ追加します。</div></div>
