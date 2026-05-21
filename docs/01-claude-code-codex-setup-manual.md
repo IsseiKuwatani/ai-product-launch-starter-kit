@@ -42,6 +42,23 @@ Claude Code / Codex は、あなたの代わりにコードを書く「開発パ
    - 例: `my-ai-diagnosis-app`
    - 例: `ai-booking-assistant`
 
+## スターターキットは /setup で開始できます
+
+Claude Codeでテンプレートを開いた場合は、最初に `/setup` と入力してください。
+
+```bash
+cd template/next-ai-product-starter
+claude
+# Claude Code内で /setup
+```
+
+Codexで進める場合は、`/setup` をslashとして実行できなくても、ヘルプページやプロンプト集のファイルパスを渡せば同じ方針で進められます。
+
+```text
+docs/help.html と prompts/02-development-prompts.md を読んで、まず1画面MVPを作る手順で進めてください。
+必要なら skills/setup/SKILL.md も参考にしてください。
+```
+
 ## Claude Code / Codexに渡す最初の依頼文
 
 ```md
