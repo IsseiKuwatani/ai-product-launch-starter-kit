@@ -42,6 +42,50 @@ Claude Code / Codex は、あなたの代わりにコードを書く「開発パ
    - 例: `my-ai-diagnosis-app`
    - 例: `ai-booking-assistant`
 
+
+## CLI認証は必ず行う
+
+Claude Code / Codex は、インストールしただけでは使えません。最初にCLIでログインし、認証状態を確認してください。
+
+### Claude Code の認証
+
+```bash
+claude auth login
+claude auth status --text
+claude doctor
+```
+
+Anthropic ConsoleのAPI課金で使う場合は、次を使います。
+
+```bash
+claude auth login --console
+```
+
+会社や組織のSSOを使う場合は、必要に応じて次を使います。
+
+```bash
+claude auth login --sso
+```
+
+### Codex CLI の認証
+
+ChatGPT / OpenAIアカウントで使う場合は、次を実行します。
+
+```bash
+codex login
+codex login status
+```
+
+OpenAI APIキーで使う場合は、キーをチャットやGitHubに貼らず、ターミナルから渡します。
+
+```bash
+export OPENAI_API_KEY="sk-..."
+printenv OPENAI_API_KEY | codex login --with-api-key
+codex login status
+```
+
+> APIキー、パスワード、アクセストークンはSlack・チャット・GitHub・ソースコードに貼らないでください。
+
 ## スターターキットは /setup で開始できます
 
 Claude Codeでテンプレートを開いた場合は、最初に `/setup` と入力してください。

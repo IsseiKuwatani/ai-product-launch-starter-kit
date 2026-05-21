@@ -45,8 +45,8 @@
     <section class="panel">
       <h2>おすすめルート</h2>
       <div class="route">
-        <div class="card"><strong>Claude Codeルート</strong><p>導入マニュアル → テンプレートを開く → <code>/setup</code> → ブラウザ確認 → 必要に応じてプロンプト集</p></div>
-        <div class="card"><strong>Codexルート</strong><p>導入マニュアル → テンプレートを開く → ヘルプ/プロンプト集のリンクやファイルパスをCodexに渡す → ブラウザ確認 → 必要に応じて保存/AI機能</p></div>
+        <div class="card"><strong>Claude Codeルート</strong><p>導入マニュアル → <code>claude auth login</code> → 認証確認 → テンプレートを開く → <code>/setup</code> → ブラウザ確認</p></div>
+        <div class="card"><strong>Codexルート</strong><p>導入マニュアル → <code>codex login</code> → 認証確認 → テンプレートを開く → ヘルプ/プロンプト集のファイルパスをCodexに渡す → ブラウザ確認</p></div>
       </div>
     </section>
 
@@ -69,6 +69,7 @@ docs/help.html と prompts/02-development-prompts.md を読んで、
       <div class="question"><h3>Q. プロンプト集と <code>/setup</code> は両方やる必要がありますか？</h3><div class="answer">A. 必須ではありません。<code>/setup</code> で最初の形を作り、その後の改善でプロンプト集を使う、という順番が分かりやすいです。</div></div>
       <div class="question"><h3>Q. <code>/setup</code> やヘルプはCodexでも使えますか？</h3><div class="answer">A. はい、考え方としては使えます。Claude Codeのように <code>/setup</code> slashとして動かない場合でも、Codexに <code>docs/help.html</code> や <code>prompts/02-development-prompts.md</code>、<code>skills/setup/SKILL.md</code> のファイルパスを渡して「この手順を読んで進めて」と頼めばOKです。</div></div>
       <div class="question"><h3>Q. MacとWindowsのどちらのマニュアルを見ればいいですか？</h3><div class="answer">A. 自分のPCに合わせます。<span class="chip"><img class="logo" src="../assets/logos/apple.svg" alt="Macロゴ">Mac</span>ならMac版、<span class="chip"><img class="logo" src="../assets/logos/windows.svg" alt="Windowsロゴ">Windows</span>ならWindows版です。</div></div>
+      <div class="question"><h3>Q. CLI認証は必要ですか？</h3><div class="answer">A. 必要です。Claude Codeは <code>claude auth login</code>、Codexは <code>codex login</code> を実行してから使います。インストール後に、必ず認証状態の確認まで行ってください。</div></div>
       <div class="question"><h3>Q. ターミナルやコマンドが怖いです。</h3><div class="answer">A. コピーして貼るだけの行を使います。意味が不安なときは、AIに「今から実行するコマンドの意味を1行で説明して」と聞いてから実行してください。</div></div>
       <div class="question"><h3>Q. AI APIキーは最初から必要ですか？</h3><div class="answer">A. 不要です。最初はAI接続なしのモック結果で体験を確認します。「入力する → 結果が出る」流れができてから、必要な場合だけ追加します。</div></div>
       <div class="question"><h3>Q. どこまでできたら初回セットアップ完了ですか？</h3><div class="answer">A. ブラウザで自分のPC上のページが開き、「入力する → 結果が表示される」まで確認できたら完了です。公開、ログイン、決済は次の段階でOKです。</div></div>
