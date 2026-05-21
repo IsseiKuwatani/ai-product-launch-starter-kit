@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>AI Webサービス制作スターターキット</title>
-  <meta name="description" content="AIプロダクト立ち上げラボ by ツギノメの無料キット。導入マニュアル、順番に貼るプロンプト集、/setup対応skill、制作テンプレートを配布。" />
+  <meta name="description" content="AIプロダクト立ち上げラボ by ツギノメの無料キット。スターターキット一式のダウンロード、導入マニュアル、ヘルプFAQを配布。" />
   <style>
     :root{--navy:#062448;--green:#008f68;--green2:#00a879;--mint:#e5fbf3;--bg:#f8fcfa;--text:#143044;--line:#cfeee4;--yellow:#fff6d8;--blue:#174ea6;--soft:#f6fffb}
     *{box-sizing:border-box;min-width:0}html{scroll-behavior:smooth;overflow-x:hidden}body{width:100%;max-width:100%;overflow-x:hidden;margin:0;font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',YuGothic,Meiryo,sans-serif;background:radial-gradient(circle at 88% 4%,#dcfff4 0,#dcfff400 32%),linear-gradient(180deg,#f8fcfa,#eefaf5 55%,#f8fcfa);color:var(--text);line-height:1.82}a{color:var(--green)}code{max-width:100%;overflow-wrap:anywhere}.wrap{width:min(100%,1120px);margin:auto;padding:28px 20px 72px}.topbar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:1000;color:var(--navy)}.mark{flex:0 0 auto;width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--green),#5de7bd);display:grid;place-items:center;color:#fff}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{font-weight:900;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 14px;color:var(--navy)}.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:24px;align-items:stretch}.hero-copy,.hero-panel,.section{background:#fff;border:1px solid var(--line);border-radius:32px;padding:34px;box-shadow:0 24px 60px rgba(6,36,72,.08);position:relative;overflow:hidden}.hero-copy:after{content:"START";position:absolute;right:-12px;bottom:-18px;font-size:96px;font-weight:1000;color:rgba(0,143,104,.06);letter-spacing:-.08em;pointer-events:none}.badge{display:inline-flex;gap:8px;align-items:center;background:var(--mint);color:var(--green);font-weight:1000;border-radius:999px;padding:10px 16px}.badge:before{content:"LINE登録特典";font-size:13px}.badge span{background:#fff;border-radius:999px;padding:3px 8px;color:var(--navy)}h1{font-size:clamp(36px,6vw,68px);line-height:1.04;color:var(--navy);letter-spacing:-.06em;margin:18px 0 16px}h2{font-size:32px;color:var(--navy);margin:0 0 10px;letter-spacing:-.04em}h3{color:var(--navy);margin:0 0 8px}.lead{font-size:18px}.hello{font-weight:1000;color:var(--green);font-size:18px}.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;max-width:100%;background:var(--green);color:#fff;text-decoration:none;border-radius:16px;padding:14px 17px;font-weight:1000;box-shadow:0 12px 24px rgba(0,143,104,.24);transition:.18s transform,.18s box-shadow;white-space:normal;text-align:center;line-height:1.35}.btn:hover{transform:translateY(-2px);box-shadow:0 18px 30px rgba(0,143,104,.28)}.btn.secondary{background:#fff;color:var(--green);border:2px solid var(--green);box-shadow:none}.btn:after{content:"→"}.small{color:#64748b;font-size:14px}.hero-panel{display:flex;flex-direction:column;gap:14px}.terminal{max-width:100%;overflow-wrap:anywhere;background:#071c34;color:#e5fbf3;border-radius:20px;padding:18px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.7;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}.terminal b{color:#7df0c7}.mini-step{display:flex;gap:12px;background:#fbfffd;border:1px solid #d8eee6;border-radius:18px;padding:14px}.mini-step strong{color:var(--navy)}.numchip{flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-weight:1000}.pill{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:var(--green);border-radius:999px;padding:9px 13px;font-weight:1000}.section{margin-top:28px;box-shadow:0 14px 34px rgba(6,36,72,.05)}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}.resource-list,.route-list,.flow-list{margin-top:20px;border-top:1px solid #d8eee6}.resource-row,.route-row,.flow-row{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid #d8eee6}.resource-row strong,.route-row strong,.flow-row strong{display:block;color:var(--navy);font-size:20px;margin-bottom:6px}.num{color:var(--green);font-weight:1000;letter-spacing:.08em}.label{display:inline-flex;color:var(--green);font-weight:1000;font-size:13px;letter-spacing:.08em;margin-bottom:4px}.logo{width:22px;height:22px;object-fit:contain;vertical-align:middle}.manual-links,.inline-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.manual-links a,.text-link{display:inline-flex;align-items:center;gap:7px;background:var(--mint);border:1px solid #ccefe3;border-radius:999px;padding:8px 10px;text-decoration:none;font-weight:900;color:var(--navy);line-height:1.35}.text-link{background:#fff}.callout{background:var(--yellow);border:1px solid #f6dc7a;border-radius:20px;padding:16px 18px;font-weight:900;margin-top:18px}.view-note{display:flex;gap:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:14px;margin-top:18px}.footer-cta{text-align:center}.footer-cta .btn{font-size:18px}.help-toggle{margin-top:20px}.help-toggle summary{list-style:none;display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-weight:1000;color:var(--navy)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.help-toggle summary::-webkit-details-marker{display:none}.help-icon{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-size:18px;font-weight:1000;box-shadow:0 10px 20px rgba(0,143,104,.24)}.help-label{font-size:13px;color:var(--green);font-weight:1000}.help-content{margin-top:12px;padding:16px 18px;border-radius:20px;background:var(--soft);border:1px solid var(--line)}
@@ -16,7 +16,7 @@
   <main class="wrap">
     <header class="topbar">
       <div class="brand"><span class="mark">T</span><span>ツギノメ / AIプロダクト立ち上げラボ</span></div>
-      <nav class="nav"><a href="#kit">受け取りキット</a><a href="#choose">どちらを使う？</a><a href="#position">使い方の違い</a><a href="docs/help.html">ヘルプ</a></nav>
+      <nav class="nav"><a href="#download">ダウンロード</a><a href="#manual">マニュアル</a><a href="docs/help.html">ヘルプ</a></nav>
     </header>
 
     <section class="hero">
@@ -24,84 +24,56 @@
         <span class="badge"><span>無料キット</span></span>
         <h1>AI Webサービス制作<br>スターターキット</h1>
         <p class="hello" id="hello">ようこそ、AIプロダクト立ち上げラボへ</p>
-        <p class="lead">Claude Code / Codex を使って、非エンジニアでもAI Webサービスの最初の形を作り始めるための実用セットです。まずは自分のPCで動く簡単なサービスを作り、必要に応じて機能を広げていきます。</p>
+        <p class="lead">まずはスターターキット一式をダウンロードして、作業用フォルダに置いてください。中身を確認したい人向けに、マニュアルとヘルプもブラウザで見られるようにしています。</p>
         <div class="cta-row">
           <a class="btn" href="downloads/ai-product-launch-starter-kit.zip" download>一式をダウンロード</a>
-          <a class="btn secondary" href="#kit">中身を見る</a>
+          <a class="btn secondary" href="#manual">マニュアルを見る</a>
+          <a class="btn secondary" href="docs/help.html">ヘルプを見る</a>
         </div>
-        <details class="help-toggle">
-          <summary aria-label="困った時のヘルプを開く"><span class="help-icon">?</span><span class="help-label">ヘルプ</span></summary>
-          <div class="help-content">
-            迷ったら、まずは今契約しているAIで始めてOKです。Claudeの人はClaude Code、ChatGPT / OpenAIの人はCodex。詳しいFAQは <a href="docs/help.html">ヘルプページ</a> で確認できます。
-          </div>
-        </details>
       </div>
       <aside class="hero-panel" id="setup">
-        <span class="pill">立ち上げ後の最短ルート</span>
-        <div class="terminal"><b>$</b> ダウンロードしたZIPを展開<br><b>$</b> cd ai-product-launch-starter-kit/template/next-ai-product-starter<br><b>$</b> npm install<br><b>$</b> claude<br><b>Claude Code</b> /setup</div>
-        <div class="mini-step"><span class="numchip">1</span><div><strong>一式をダウンロード</strong><br>ZIPを展開して、作業しやすいディレクトリに置きます。</div></div>
-        <div class="mini-step"><span class="numchip">2</span><div><strong>テンプレートを開く</strong><br><code>template/next-ai-product-starter</code> をVS Codeなどで開きます。</div></div>
-        <div class="mini-step"><span class="numchip">3</span><div><strong>/setup またはプロンプト集で開始</strong><br>Claude Codeなら <code>/setup</code>、Codexならヘルプ/プロンプト集を渡して進めます。</div></div>
+        <span class="pill">最初にやること</span>
+        <div class="terminal"><b>$</b> ZIPをダウンロードして展開<br><b>$</b> 作業用フォルダに置く<br><b>$</b> template/next-ai-product-starter を開く</div>
+        <div class="mini-step"><span class="numchip">1</span><div><strong>一式をダウンロード</strong><br>まずZIPを保存して展開します。</div></div>
+        <div class="mini-step"><span class="numchip">2</span><div><strong>作業用フォルダに置く</strong><br>デスクトップやDocumentsなど、迷わない場所に置きます。</div></div>
+        <div class="mini-step"><span class="numchip">3</span><div><strong>マニュアルを見ながら進める</strong><br>Claude Code / Codex と Mac / Windows に合わせて手順を確認します。</div></div>
       </aside>
     </section>
 
-    <section class="section" id="kit">
+    <section class="section" id="download">
       <div class="section-head">
-        <div><h2>受け取りキット</h2><p>まずは一式をダウンロードして、作業用ディレクトリに置いてください。ブラウザで中身を確認することもできます。</p></div>
-        <span class="pill">ZIPで一式ダウンロード可</span>
+        <div><h2>ダウンロード</h2><p>必要なファイルをまとめたZIPです。まずはこちらをダウンロードしてください。</p></div>
+        <span class="pill">スターターキット一式</span>
       </div>
       <div class="resource-list">
-        <div class="resource-row"><span class="num">01</span><div><strong>スターターキット一式</strong><p>導入マニュアル、プロンプト集、/setup skill、制作テンプレートをまとめたZIPです。まずこれをダウンロードして展開してください。</p><a class="btn" href="downloads/ai-product-launch-starter-kit.zip" download>一式をダウンロード</a></div></div>
-        <div class="resource-row"><span class="num">02</span><div><strong>導入マニュアル</strong><p>Claude Code / Codexを使って開発を始めるためのHTML手順書。</p><div class="manual-links"><a href="docs/manuals/claude-code-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Claude Code Mac</a><a href="docs/manuals/claude-code-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Claude Code Windows</a><a href="docs/manuals/codex-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Codex Mac</a><a href="docs/manuals/codex-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Codex Windows</a></div></div></div>
-        <div class="resource-row"><span class="num">03</span><div><strong>開発プロンプト集 順番に貼る版</strong><p>Codexの人は、このページのリンク/ファイルパスを渡して進められます。一歩ずつ確認したい人にもおすすめ。</p><a class="text-link" href="prompts/development-prompts.html">プロンプト集を開く</a></div></div>
-        <div class="resource-row"><span class="num">04</span><div><strong>/setup対応 skill</strong><p>Claude Code向け。テンプレート起動後、<code>/setup</code> から初期セットアップできます。</p><a class="text-link" href="docs/manuals/setup-skill.html">/setupを確認する</a></div></div>
-        <div class="resource-row"><span class="num">05</span><div><strong>ヘルプFAQ</strong><p>「どちらがいいの？」「/setupとプロンプト集の違いは？」に答えるヘルプページ。</p><a class="text-link" href="docs/help.html">？ ヘルプFAQを開く</a></div></div>
-        <div class="resource-row"><span class="num">06</span><div><strong>企画ワークシート</strong><p>サービス案を要件定義に変換する記入式シート。</p><a class="text-link" href="docs/04-product-planning-worksheet.md">ワークシートを開く</a></div></div>
-        <div class="resource-row"><span class="num">07</span><div><strong>制作テンプレート</strong><p>Next.jsでAI WebサービスMVPを作るためのスターター。</p><a class="text-link" href="template/next-ai-product-starter/">テンプレートを開く</a></div></div>
+        <div class="resource-row"><span class="num">01</span><div><strong>スターターキット一式</strong><p>必要なファイルをまとめたZIPです。まずこれをダウンロードして展開してください。</p><a class="btn" href="downloads/ai-product-launch-starter-kit.zip" download>一式をダウンロード</a></div></div>
       </div>
     </section>
 
-    <section class="section" id="choose">
+    <section class="section" id="manual">
       <div class="section-head">
-        <div><h2>どちらを使えばいい？</h2><p>結論はシンプルです。<strong>今契約しているAI・使えるAIで始めてOK</strong>です。両方を新しく契約する必要はありません。</p></div>
+        <div><h2>マニュアル</h2><p>ダウンロード後、中身を確認したい人はこちらから見られます。自分のAIツールとOSに合うものを選んでください。</p></div>
       </div>
-      <details class="help-toggle">
-        <summary aria-label="選び方の補足を開く"><span class="help-icon">?</span><span class="help-label">ヘルプ</span></summary>
-        <div class="help-content">Claudeを契約中ならClaude Code、ChatGPT / OpenAIを契約中ならCodexから始めてください。途中で乗り換えるより、まず1画面MVPまで進める方が大事です。</div>
-      </details>
-      <div class="route-list">
-        <div class="route-row"><span class="label">Claudeを契約中</span><div><strong>Claude Codeがおすすめ</strong><p>テンプレートを開いたあと、<code>/setup</code> から初回セットアップを進めやすいです。</p><div class="inline-actions"><a class="btn" href="docs/manuals/claude-code-mac.html">Mac版を見る</a><a class="btn secondary" href="docs/manuals/claude-code-windows.html">Windows版を見る</a></div></div></div>
-        <div class="route-row"><span class="label">ChatGPT / OpenAIを契約中</span><div><strong>Codexがおすすめ</strong><p>Codexには、ヘルプページやプロンプト集のリンク/ファイルパスを渡して「この手順で進めて」と頼むのが分かりやすいです。</p><div class="inline-actions"><a class="btn" href="docs/manuals/codex-mac.html">Mac版を見る</a><a class="btn secondary" href="docs/manuals/codex-windows.html">Windows版を見る</a></div></div></div>
+      <div class="resource-list">
+        <div class="resource-row"><span class="num">02</span><div><strong>導入マニュアル</strong><p>Claude Code / Codexを使って開発を始めるための手順書です。</p><div class="manual-links"><a href="docs/manuals/claude-code-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Claude Code Mac</a><a href="docs/manuals/claude-code-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Claude Code Windows</a><a href="docs/manuals/codex-mac.html"><img class="logo" src="assets/logos/apple.svg" alt="Macロゴ">Codex Mac</a><a href="docs/manuals/codex-windows.html"><img class="logo" src="assets/logos/windows.svg" alt="Windowsロゴ">Codex Windows</a></div></div></div>
       </div>
     </section>
 
-    <section class="section" id="position">
-      <h2>プロンプト集と <code>/setup</code> の使い方の違い</h2>
-      <div class="route-list">
-        <div class="route-row"><span class="label">プロンプト集</span><div><strong>順番に貼る「台本」</strong><p>Claude Code / Codexどちらでも使えます。Step 0から順番に貼り、作業を一つずつ確認しながら進めたい人向けです。</p></div></div>
-        <div class="route-row"><span class="label">/setup skill</span><div><strong>Claude Code向けの「初回案内係」</strong><p>テンプレート内のファイルを確認し、質問に答えながら最初の1画面MVPへ整える入口です。</p></div></div>
+    <section class="section" id="help">
+      <div class="section-head">
+        <div><h2>ヘルプ</h2><p>どれを見ればいいか迷ったとき、Claude Code / Codex の違いを確認したいときはこちらを見てください。</p></div>
       </div>
-      <div class="callout">迷ったら、Claude Codeの人は <code>/setup</code>。Codexの人はヘルプ/プロンプト集のファイルリンクを渡して「この手順で進めて」と依頼。やることのゴールは同じです。</div>
-    </section>
-
-    <section class="section" id="flow">
-      <h2>「ダウンロードして終わり」ではなく、立ち上げまで進める設計</h2>
-      <div class="callout">まずZIPをダウンロードして展開し、作業用ディレクトリに置いてください。その後、Claude Codeなら <strong>/setup</strong>。Codexなら <strong>ヘルプ/プロンプト集のファイルリンクを渡して</strong> 進めます。</div>
-      <div class="flow-list">
-        <div class="flow-row"><span class="num">1</span><div><strong>一式をダウンロード</strong><p>ZIPを展開して、デスクトップや作業用フォルダなど分かりやすい場所に置く。</p></div></div>
-        <div class="flow-row"><span class="num">2</span><div><strong>AIとOSの手順を見る</strong><p>ClaudeならClaude Code、ChatGPT/OpenAIならCodex。<img class="logo" src="assets/logos/apple.svg" alt="Mac"> Mac / <img class="logo" src="assets/logos/windows.svg" alt="Windows"> Windows の自分のPCに合う手順を確認。</p></div></div>
-        <div class="flow-row"><span class="num">3</span><div><strong>テンプレを開く</strong><p><code>template/next-ai-product-starter</code> をVS Codeなどで開く。</p></div></div>
-        <div class="flow-row"><span class="num">4</span><div><strong>MVP化</strong><p>/setup、またはファイルリンクを渡したプロンプト集で、1画面MVPへ整える。</p></div></div>
+      <div class="resource-list">
+        <div class="resource-row"><span class="num">03</span><div><strong>ヘルプFAQ</strong><p>「どちらがいいの？」「最初に何をすればいいの？」に答えるページです。</p><a class="text-link" href="docs/help.html">ヘルプFAQを開く</a></div></div>
       </div>
     </section>
 
     <section class="section footer-cta">
-      <div class="view-note"><b>補足:</b><span>GitHub Pages上では資料を閲覧できます。実際に使うときはZIPをダウンロードして展開し、作業用ディレクトリに置いてください。</span></div>
+      <div class="view-note"><b>補足:</b><span>基本はまずZIPをダウンロード。中身が気になる人だけ、マニュアルやヘルプをブラウザで確認してください。</span></div>
       <div class="cta-row" style="justify-content:center">
         <a class="btn" href="downloads/ai-product-launch-starter-kit.zip" download>一式をダウンロード</a>
-        <a class="btn secondary" href="docs/help.html">ヘルプFAQを見る</a>
-        <a class="btn secondary" href="docs/manuals/setup-skill.html">/setupの中身を見る</a>
-        <a class="btn secondary" href="https://timerex.net/s/tsuginome/da96046c">8週間で作れるか相談する</a>
+        <a class="btn secondary" href="#manual">マニュアルを見る</a>
+        <a class="btn secondary" href="docs/help.html">ヘルプを見る</a>
       </div>
     </section>
   </main>
